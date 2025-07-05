@@ -1,0 +1,57 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE MISSÕES (QUEST)
+# =====================================================
+
+# --- Feedback Geral ---
+not-found: "&cMissão com ID '{0}' não encontrada."
+offer: "&e[Missão] {0}: &7{1}"
+accept-prompt: "&aDigite /quest accept {0} para iniciar esta missão."
+accepted: "&aMissão Aceita: {0}!"
+completed: "&6Missão Concluída: {0}!"
+
+# --- Mensagens de Falha ---
+cannot-start: "&cVocê não cumpre os requisitos para iniciar a missão: {0}."
+cannot-start-level: "&cVocê precisa ser nível {0} para iniciar esta missão."
+cannot-start-quest: "&cVocê precisa completar a missão '{0}' primeiro."
+objectives-not-complete: "&cVocê ainda não completou todos os objetivos da missão: {0}."
+
+# --- Recompensas ---
+reward:
+  xp: "&a+ {0} XP"
+  money: "&6+ ${0}"
+  item: "&a+ {0} x{1}" # Ex: + Espada de Ferro x1
+
+# --- Diário de Missões (Quest Log) ---
+log:
+  title-separator: "&7&m----------------------------------"
+  quest-title: "  &6{0}"
+  quest-description: "    &7&o{0}"
+  objectives-header: "  &eObjetivos:"
+  rewards-header: "  &eRecompensas:"
+  no-active-quests: "&7Você não possui missões ativas."
+
+# --- Formato e Descrições dos Objetivos ---
+objective:
+  # Formato para exibir o progresso de um objetivo.
+  # {0} = Texto do objetivo (ex: "Mate 5 Goblins")
+  # {1} = Progresso (ex: "3/5")
+  format:
+    incomplete: "&7- {0} &c({1})"
+    complete: "&a- &m{0}&a (Concluído)"
+
+  # Chaves de descrição genéricas para cada tipo de objetivo.
+  # {0} = Nome do alvo (traduzido pelo sistema de Mobs/Itens)
+  # {1} = Quantidade necessária
+  description:
+    kill_mobs: "Derrote {1} {0}"
+    collect_items: "Colete {1} {0}"
+    reach_location: "Vá para {0}"
+    talk_to_npc: "Fale com {0}"
+
+# =====================================================
+#       DEFINIÇÕES DE MISSÕES ESPECÍFICAS
+# =====================================================
+quests:
+  exemplo_cacador_goblins:
+    title: "Caçador de Goblins"
+    description: "A guarda da cidade precisa de ajuda para lidar com uma infestação de goblins perto da floresta."

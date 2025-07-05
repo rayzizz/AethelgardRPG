@@ -1,0 +1,158 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE ADMINISTRAÇÃO (ADMIN)
+# =====================================================
+
+# --- Mensagens de Chat ---
+chat:
+  # Comandos de moderação
+  ban:
+    usage: "&cUse: /ban <jogador> [motivo]"
+    default-reason: "Motivo não especificado."
+    success: "&aJogador {0} foi banido. Motivo: {1}"
+    kick-message: "&cVocê foi banido do servidor. Motivo: {0}"
+  kick:
+    usage: "&cUse: /kick <jogador> [motivo]"
+    default-reason: "Motivo não especificado."
+    success: "&aJogador {0} foi kickado. Motivo: {1}"
+    kick-message: "&cVocê foi kickado do servidor. Motivo: {0}"
+  mute:
+    usage: "&cUse: /mute <jogador> [tempo] [motivo]"
+    success: "&aJogador {0} foi mutado (placeholder)."
+    muted-message: "&cVocê foi mutado (placeholder)."
+  vanish:
+    enabled: "&aVocê agora está invisível."
+    disabled: "&aVocê não está mais invisível."
+  gamemode:
+    usage: "&cUse: /gamemode <modo> [jogador]"
+    invalid-mode: "&cModo de jogo inválido: {0}. Use survival, creative, adventure, spectator ou 0, 1, 2, 3."
+    player-only-or-specify: "&cVocê deve ser um jogador para usar este comando em si mesmo, ou especificar um jogador."
+    success: "&aModo de jogo de {0} alterado para {1}."
+    changed-by-other: "&aSeu modo de jogo foi alterado para {0}."
+
+  # Comandos de obtenção de itens
+  getaccessory:
+    usage: "&cUse: /getaccessory <id_do_acessorio>"
+    itemmodule-not-found: "&cMódulo de Itens não encontrado. Comando indisponível."
+    item-not-found: "&cItem acessório com ID '{0}' não encontrado."
+    not-an-accessory: "&cO item '{0}' não é um acessório válido."
+    success: "&aVocê recebeu o acessório: {0}"
+  getarmor:
+    usage: "&cUse: /getarmor <id_da_armadura>"
+    itemmodule-not-found: "&cMódulo de Itens não encontrado. Comando indisponível."
+    item-not-found: "&cArmadura com ID '{0}' não encontrada."
+    not-an-armor: "&cO item '{0}' não é uma armadura válida."
+    success: "&aVocê recebeu a armadura: {0}"
+  gettestweapon:
+    usage: "&cUse: /gettestweapon <classe>"
+    invalid-class: "&cClasse inválida: {0}."
+    itemmodule-not-found: "&cMódulo de Itens não encontrado. Comando indisponível."
+    weapon-creation-failed: "&cFalha ao criar arma de teste para a classe {0}."
+    check-config: "&eVerifique se o arquivo 'items/test_weapons/{0}.yml' existe e está correto."
+    success: "&aVocê recebeu a arma de teste para {0}."
+
+  # Comandos de gerenciamento de jogador/mob
+  setclass:
+    usage: "&cUse: /setclass <jogador> <classe>"
+    class-not-found: "&cClasse '{0}' não encontrada."
+    player-no-data: "&cJogador {0} não possui dados de personagem carregados."
+    success: "&aA classe de {0} foi definida para {1}."
+    changed-by-other: "&aUm administrador alterou sua classe para {0}."
+  spawntestmob:
+    usage: "&cUse: /spawntestmob <mob_id>"
+    not-found: "&cMob customizado com ID '{0}' não encontrado."
+    success: "&aMob customizado invocado com sucesso: {0}."
+    spawn-failed: "&cFalha ao invocar o mob customizado: {0}."
+    module-not-found: "&cMódulo CustomMob não encontrado ou desabilitado."
+
+  # Comando de Stats Infinitos
+  infinitestats:
+    enabled: "&aStats infinitos habilitados para {0}."
+    disabled: "&cStats infinitos desabilitados para {0}."
+    changed-by-other: "&eSeu status de stats infinitos foi {0}."
+    usage: "&cUso: /infinitestats [jogador]"
+    stamina-enabled: "&aStamina infinita também está ativa."
+    stamina-disabled: "&cStamina infinita foi desativada."
+
+  # Mensagens de erro de configuração
+  invalid-sound-config: "&cA configuração de som '{0}' é inválida."
+
+# --- Comando /rpgadmin (Refatorado) ---
+rpgadmin:
+  usage: "&cUse: /rpgadmin <performance|economy|inspect [jogador]>"
+  economy-placeholder: "&eEstatísticas da economia (placeholder)."
+  inspect-usage: "&cUse: /rpgadmin inspect <jogador>"
+  inspect-console-placeholder: "&eInspecionando {0} (console - placeholder)."
+  performance-header: "&6--- Tempos de Performance ---"
+  performance-no-data: "&eNenhum dado de performance coletado ainda."
+  performance-entry: "&7- &f{0}: &e{1} ms"
+
+# --- Mensagens de GUI ---
+gui_main:
+  title: "Painel de Administração RPG"
+  item:
+    performance:
+      name: "&6Monitor de Performance"
+      lore1: "&7Clique para ver os tempos"
+      lore2: "&7de várias operações do plugin."
+    inspect:
+      name: "&bInspecionar Jogador"
+      lore1: "&7Clique para inspecionar"
+      lore2: "&7os dados de um jogador online."
+    economy:
+      name: "&eGerenciar Economia"
+      lore1: "&7(Em breve)"
+      lore2: "&7Gerenciar aspectos da economia."
+    reload:
+      name: "&aRecarregar Configurações"
+      lore1: "&7Clique para recarregar todas"
+      lore2: "&7as configurações do plugin."
+  action:
+    inspect-prompt-json-click: "&a[Clique aqui ou digite /rpgadmin inspect <nome>]"
+    inspect-prompt-json-hover: "&eClique para sugerir o comando no chat."
+    inspect-prompt-chat-instruction: "&eOu digite o nome do jogador no chat para inspecionar (ou 'cancelar')."
+    inspect-cancelled: "&eInspeção cancelada."
+    inspect-timeout: "&cTempo para inserir o nome do jogador esgotado."
+
+gui_inspect:
+  title: "Inspecionar Jogador: {0}"
+  no-data: "&cNão foi possível carregar os dados do jogador {0}."
+  item_compass:
+    name: "&6Informações de {0}"
+    lore_player: "&7Jogador: &f{0}"
+    lore_class: "&7Classe: &e{0}"
+    lore_level_xp: "&7Nível: &e{0} &7(XP: &e{1}/{2}&7)"
+    lore_money: "&7Dinheiro: &6{0}"
+    lore_attr_points: "&7Pontos de Atributo: &b{0}"
+  item:
+    primary_attributes:
+      name: "&cAtributos Primários"
+      lore:
+        strength: "&7Força: &f{0}"
+        intelligence: "&7Inteligência: &f{0}"
+        faith: "&7Fé: &f{0}"
+        dexterity: "&7Destreza: &f{0}"
+        agility: "&7Agilidade: &f{0}"
+    secondary_attributes:
+      name: "&aAtributos Secundários"
+      lore:
+        health: "&7Vida: &f{0} / {1}"
+        mana: "&7Mana: &f{0} / {1}"
+    skills:
+      name: "&bHabilidades"
+      lore:
+        header: "&7Níveis de Habilidade:"
+        entry: "&e{0}: &f{1} &7(&e{2} XP&7)"
+
+gui_performance:
+  title: "Monitor de Performance"
+  no_data:
+    name: "&cSem Dados"
+    lore: "&7Nenhum tempo de performance foi registrado ainda."
+  item:
+    name_prefix: "&eTempo: &f"
+    lore_time: "&7Duração: &f{0} ms"
+    description_default: "&7Tempo de execução para: &f{0}"
+    description_module_enable: "&7Tempo para habilitar módulo: &f{0}"
+    description_module_disable: "&7Tempo para desabilitar módulo: &f{0}"
+    description_player_load: "&7Tempo para carregar dados de: &f{0}"
+    description_player_save: "&7Tempo para salvar dados de: &f{0}"

@@ -1,0 +1,17 @@
+# ID do perfil: "slow_steady_percent"
+enabled: true
+is-percentage: true
+amount: 0.02 # 2% da vida máxima
+interval-ticks: 60 # 3 segundos
+particle:
+  enabled: true
+  type: "HAPPY_VILLAGER"
+  count: 3
+  offset-x: 0.3
+  offset-y: 0.5
+  offset-z: 0.3
+  speed: 0.02
+floating-text:
+  enabled: true
+  format: "+{amount}% HP"
+  duration-ticks: 25

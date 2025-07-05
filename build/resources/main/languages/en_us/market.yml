@@ -1,0 +1,31 @@
+# =====================================================
+#       MARKET MODULE MESSAGES (MARKET)
+# =====================================================
+
+# --- Listing Messages (Sell) ---
+cannot-list-air: "&cYou cannot list nothing."
+invalid-price: "&cThe price must be greater than zero."
+item-not-found-inventory: "&cYou do not have that item in your inventory."
+not-enough-money-for-fee: "&cYou don't have enough money for the listing fee of ${0}."
+item-listed-success: "&aSuccessfully listed {0} for ${1}."
+
+# --- Purchase Messages ---
+listing-not-found-or-expired: "&cThis listing is no longer available."
+cannot-buy-own-item: "&cYou cannot buy your own item."
+not-enough-money-to-buy: "&cYou don't have enough money to buy this. Price: ${0}"
+item-purchased-success: "&aYou purchased {0} from {1}."
+
+# --- Command Messages ---
+gui-open-placeholder: "&eOpening market GUI... (placeholder)"
+sell-usage: "&cUsage: /market sell <price>"
+sell-no-item-in-hand: "&cYou need to hold an item in your hand to sell it."
+invalid-price-format: "&cInvalid price format. Use a number (e.g., 10.50)."
+
+# --- Future Messages (TODOs) ---
+# cancel-listing-success: "&aYour listing of {0} has been cancelled."
+# cancel-listing-fail: "&cFailed to cancel listing. Check ID."
+# view-usage: "&cUsage: /market view [player]"
+# history-usage: "&cUsage: /market history"
+# no-active-listings: "&eNo active listings at the moment."
+# your-listings-header: "&e--- Your Active Listings ---"
+# your-listings-entry: "&7- {0} for ${1} (ID: {2})"

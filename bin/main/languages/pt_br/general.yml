@@ -1,0 +1,28 @@
+# =====================================================
+#       MENSAGENS GERAIS DO PLUGIN
+# =====================================================
+
+# --- Informações e Comandos ---
+plugin-info: "&a{0} &7v{1} por Ray."
+no-permission: "&cVocê não tem permissão para fazer isso."
+player-not-found: "&cJogador '{0}' não encontrado ou está offline."
+player-only-command: "&cEste comando só pode ser executado por um jogador."
+unknown-command: "&cComando desconhecido. Use /rpg help para ver os comandos."
+unknown-subcommand: "&cSubcomando desconhecido: {0}."
+module-not-found: "&cMódulo '{0}' não encontrado ou desabilitado."
+reload-success: "&aConfigurações e idiomas do AethelgardRPG recarregados com sucesso!"
+reloading-modules: "&eRecarregando módulos..."
+
+# --- Interação com Itens e Slots ---
+cannot-drop-item: "&cVocê não pode dropar este item."
+cannot-move-item: "&cVocê não pode mover este item."
+cannot-place-in-slot: "&cVocê não pode colocar itens neste slot."
+cannot-place-non-accessory-in-slot: "&cVocê só pode colocar acessórios neste slot."
+cannot-drag-non-accessory-to-slot: "&cVocê não pode arrastar um item que não seja um acessório para este slot."
+
+# --- Comando de Idioma (/lang) ---
+lang:
+  usage: "&cUse: /lang <codigo_do_idioma>"
+  available: "&eIdiomas disponíveis: {0}"
+  changed: "&aIdioma alterado para: {0}."
+  not-found: "&cIdioma '{0}' não encontrado. Disponíveis: {1}"

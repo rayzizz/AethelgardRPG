@@ -1,0 +1,17 @@
+id: test_weapons/arqueiro_test_weapon
+name-key: "item.custom_items.assassino_test_weapon.name"
+lore-key: "item.custom_items.assassino_test_weapon.lore"
+material: BOW
+rarity: RARO
+max-stack-size: 1
+is-rpg-item: true
+visual:
+  custom-model-data: 5
+requirements:
+  level: 1
+  class: ARQUEIRO
+identified: true
+stats:
+  dexterity-bonus: 5
+  agility-bonus: 3
+  physical-damage: 15 # Dano físico base da arma

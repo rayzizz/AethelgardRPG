@@ -1,0 +1,36 @@
+# The quest ID is the file name: exemplo_cacador_goblins
+
+# Key to fetch the translated title from the language file (e.g., quest.yml)
+# Format: quests.<quest_id>.title
+title-key: "quests.exemplo_cacador_goblins.title"
+
+# Key to fetch the translated description.
+description-key: "quests.exemplo_cacador_goblins.description"
+
+# ID of the NPC that starts the quest.
+# This must match the custom name of an NPC entity in-game.
+start-npc-id: "Guard_Captain_John"
+
+# Requirements to start the quest.
+requirements:
+  level: 1
+  # quests: # List of quest IDs that must be completed first.
+  #   - "another_quest_id"
+
+# Quest objectives.
+objectives:
+  kill_goblins:
+    type: "KILL_MOBS"
+    target: "test_goblin" # ID of the custom mob (must exist in /mobs/)
+    amount: 5
+    # The description-key is optional. If not provided, QuestManager will use the default:
+    # "quest.objective.description.kill_mobs"
+    # description-key: "quests.exemplo_cacador_goblins.objectives.kill_goblins"
+
+# Rewards for completing the quest.
+rewards:
+  experience: 50.0
+  money: 25.0
+  # List of commands to be executed by the console. Use {player} for the player's name.
+  # commands:
+  #   - "give {player} diamond 1"

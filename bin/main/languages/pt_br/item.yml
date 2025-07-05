@@ -1,0 +1,82 @@
+# =====================================================
+#        MENSAGENS DO MÓDULO DE ITENS (ITEM)
+# =====================================================
+
+# --- Mensagens de Chat ---
+# Chaves usadas para dar feedback ao jogador sobre o uso de itens.
+# Nota: A chave principal é 'chat_messages' para corresponder ao código.
+chat_messages:
+  cannot-use:
+    level-too-low: "&cVocê não tem nível suficiente para usar este item. (Requer: {0})"
+    strength-too-low: "&cVocê não tem força suficiente para usar este item. (Requer: {0})"
+    wrong-class: "&cVocê não pertence à classe correta para usar este item. (Requer: {0})"
+    unidentified: "&cEste item precisa ser identificado antes de poder ser usado."
+
+# --- Formatos da Lore ---
+# Define como cada linha de atributo ou requisito aparecerá na descrição (lore) do item.
+lore_formats:
+  # Requisitos
+  level-req: "&7Nível Necessário: &f{0}"
+  strength-req: "&7Força Necessária: &f{0}"
+  class-req: "&7Classe Necessária: &f{0}"
+
+  # Atributos de Dano
+  physical-damage: "&c⚔ Dano Físico: &f{0}"
+  magical-damage: "&9✨ Dano Mágico: &f{0}"
+
+  # Atributos de Bônus
+  health-bonus: "&a❤ Bônus de Vida: &f+{0}"
+  mana-bonus: "&9★ Bônus de Mana: &f+{0}"
+  strength-bonus: "&c💪 Bônus de Força: &f+{0}"
+  intelligence-bonus: "&9🧠 Bônus de Inteligência: &f+{0}" # Adicionado
+  faith-bonus: "&e🙏 Bônus de Fé: &f+{0}" # Adicionado
+  dexterity-bonus: "&a🎯 Bônus de Destreza: &f+{0}" # Adicionado
+  agility-bonus: "&b🍃 Bônus de Agilidade: &f+{0}" # Adicionado
+
+  # Atributos de Defesa
+  physical-defense-bonus: "&7🛡 Defesa Física: &f+{0}"
+  magical-defense-bonus: "&d🔮 Defesa Mágica: &f+{0}"
+
+  # Status Especiais
+  unidentified: "&8&oItem Não Identificado"
+
+# --- Nomes das Raridades ---
+# Usado para exibir a raridade do item na última linha da lore.
+rarity:
+  common: "Comum"
+  uncommon: "Incomum"
+  rare: "Raro"
+  epic: "Épico"
+  legendary: "Lendário"
+  mythic: "Mítico"
+  artifact: "Artefato"
+
+# =====================================================
+#       DEFINIÇÕES DE ITENS CUSTOMIZADOS
+# =====================================================
+# Usado como fallback ou quando 'name-key' e 'lore-key' são especificados nos arquivos de item.
+custom_items:
+  guerreiro_test_weapon:
+    name: "&bEspada de Treino do Guerreiro"
+    lore:
+      - "&7Uma espada básica para treinar os caminhos do Guerreiro."
+  mago_test_weapon:
+    name: "&9Cajado de Aprendiz do Mago"
+    lore:
+      - "&7Um cajado simples para os primeiros feitiços de um Mago."
+  clerigo_test_weapon:
+    name: "&eMaça Abençoada do Clérigo"
+    lore:
+      - "&7Uma maça imbuída com uma leve energia sagrada."
+  assassino_test_weapon:
+    name: "&8Adaga Furtiva do Assassino"
+    lore:
+      - "&7Uma adaga ágil, perfeita para ataques rápidos e sorrateiros."
+  necromante_test_weapon:
+    name: "&5Foice Ritualística do Necromante"
+    lore:
+      - "&7Uma foice usada em rituais para canalizar energias sombrias."
+  ring_of_strength:
+    name: "&cAnel da Força Bruta"
+    lore:
+      - "&7Este anel emana um poder selvagem."

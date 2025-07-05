@@ -1,0 +1,16 @@
+id: "accessories/ring_of_strength"
+name-key: "item.custom_items.ring_of_strength.name"
+lore-key: "item.custom_items.ring_of_strength.lore"
+material: "GOLD_NUGGET"
+rarity: "RARO"
+max-stack-size: 1
+is-rpg-item: true
+visual:
+  custom-model-data: 4
+is-accessory: true
+requirements:
+  level: 10
+stats:
+  strength-bonus: 3
+  health-bonus: 5
+identified: true

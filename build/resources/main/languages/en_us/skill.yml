@@ -1,0 +1,28 @@
+# =====================================================
+#       SKILL MODULE MESSAGES (SKILL)
+# =====================================================
+
+# --- Feedback Messages ---
+xp-gain: "&a+ {0} XP in {1}."
+level-up: "&bYour {0} skill leveled up to {1}!"
+
+# --- Skill Names and Descriptions ---
+type:
+  mining:
+    name: "Mining"
+    description: "Ability to extract ores and stones."
+  fishing:
+    name: "Fishing"
+    description: "Ability to catch fish and treasures."
+  alchemy:
+    name: "Alchemy"
+    description: "Ability to create potions and elixirs."
+  cooking:
+    name: "Cooking"
+    description: "Ability to prepare food that grants bonuses."
+  herbalism:
+    name: "Herbalism"
+    description: "Ability to collect rare plants and herbs."
+  forging:
+    name: "Forging"
+    description: "Ability to create and upgrade equipment."

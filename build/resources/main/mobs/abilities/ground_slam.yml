@@ -1,0 +1,38 @@
+# plugins/AethelgardRPG/mobs/abilities/ground_slam.yml
+id: "ground_slam"
+display-name: "&cImpacto Devastador"
+type: "AREA_OF_EFFECT_DAMAGE"
+cooldown-ticks: 240 # 12 segundos
+target-type: "NONE"
+range: 10.0
+description:
+  - "&7O mob salta e bate no chão com força,"
+  - "&7criando uma onda de choque destrutiva."
+
+parameters:
+  # Fase de Carga
+  charge-duration-ticks: 30 # 1.5 segundos de tempo de carga
+  charge-particle-effect: "LAVA"
+  charge-particle-count: 20
+  charge-particle-offset: 0.5
+  charge-sound-effect: "ENTITY_GHAST_WARN"
+  charge-sound-volume: 1.0
+  charge-sound-pitch: 0.8
+
+  # --- NOVOS PARÂMETROS ---
+  # Fase de Salto
+  jump-height: 1.3 # Altura do salto em blocos
+
+  # Fase de Impacto
+  impact-damage-amount: 35.0
+  impact-radius: 6.0 # Raio do dano e da onda de choque
+  impact-knockback-strength: 1.0
+  impact-particle-effect: "EXPLOSION_HUGE" # Partícula principal no centro
+  impact-sound-effect: "ENTITY_GENERIC_EXPLODE"
+  impact-sound-volume: 1.5
+  impact-sound-pitch: 0.6
+
+  # --- NOVOS PARÂMETROS ---
+  # Onda de Choque Visual
+  shockwave-particle: "CRIT" # Partícula que forma a onda de choque
+  shockwave-density: 4 # Quão densa é a onda de choque. Mais alto = mais partículas.t

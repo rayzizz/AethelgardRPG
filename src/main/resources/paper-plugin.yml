@@ -1,0 +1,79 @@
+name: AethelgardRPG # or Aethelgard_RPG
+version: '1.0'
+main: me.ray.aethelgardRPG.AethelgardRPG
+api-version: '1.21'
+prefix: Aethelgard
+authors: [ ray ]
+description: Um plugin de RPG completo para o servidor Aethelgard, com sistemas de classes, quests e economia.
+depend: [ProtocolLib]
+commands:
+  rpg:
+    description: Comando principal do Aethelgard RPG.
+    aliases: [aethelgard, arpg]
+    permission: aethelgardrpg.command.base
+    usage: "/<command> [subcomando] [argumentos]"
+  spellbook:
+    description: Abre o grimório de magias do jogador.
+    aliases: [ spells, magias ]
+    permission: aethelgardrpg.player.spellbook
+    usage: "/<command>"
+  aethelspell:
+    description: Gerencia as magias dos jogadores.
+    aliases: [aspell]
+    permission: aethelgardrpg.admin.spell
+    usage: "/<command> <learn|unlearn> <player> <spell_id>"
+  ban:
+    description: Bane um jogador do servidor.
+    permission: aethelgardrpg.admin.ban
+    usage: "/<command> <jogador> [motivo]"
+  kick:
+    description: Expulsa um jogador do servidor.
+    permission: aethelgardrpg.admin.kick
+    usage: "/<command> <jogador> [motivo]"
+  mute:
+    description: Silencia um jogador no chat. (Implementação básica)
+    permission: aethelgardrpg.admin.mute
+    usage: "/<command> <jogador> [duração] [motivo]"
+  vanish:
+    description: Torna você invisível para outros jogadores.
+    permission: aethelgardrpg.admin.vanish
+    usage: "/<command>"
+  gamemode:
+    description: Altera o modo de jogo de um jogador.
+    aliases: [gm]
+    permission: aethelgardrpg.admin.gamemode
+    usage: "/<command> <modo> [jogador]"
+  rpgadmin:
+    description: Comandos de administração específicos do Aethelgard RPG.
+    permission: aethelgardrpg.admin.rpgadmin
+    usage: "/<command> <subcomando> [argumentos]"
+    # Permissões para subcomandos serão verificadas internamente
+    # aethelgardrpg.admin.rpgadmin.performance
+    # aethelgardrpg.admin.rpgadmin.economy
+    # aethelgardrpg.admin.rpgadmin.inspect
+    # aethelgardrpg.admin.vanish.see (para ver jogadores em vanish)
+  market:
+    description: Acessa o mercado global de jogadores.
+    aliases: [ah, auctionhouse]
+    permission: aethelgardrpg.player.market
+    usage: "/<command> [sell <preço>]"
+  bank:
+    description: Acessa seu banco pessoal.
+    permission: aethelgardrpg.player.bank
+    usage: "/<command> [deposit|withdraw <quantia>]"
+  dungeon:
+    description: Gerencia e entra em dungeons.
+    permission: aethelgardrpg.player.dungeon
+    usage: "/<command> [enter <id_dungeon>]"
+  areaadmin:
+    description: Gerencia as regiões do RPG.
+    permission: aethelgardrpg.admin.area
+    usage: "/<command> <define|delete|list> [argumentos]"
+  spawntestmob:
+    description: Invoca um mob de teste (Goblin de Teste).
+    permission: aethelgardrpg.admin.spawntestmob
+    usage: "/<command>"
+  gettestweapon:
+    description: Obtém uma arma de teste para uma classe específica.
+    permission: aethelgardrpg.admin.gettestweapon
+    usage: "/<command> <CLASSE>"

@@ -1,0 +1,67 @@
+# ===================================================================
+#       CONFIGURAÇÕES DO MÓDULO DE MOBS CUSTOMIZADOS
+# ===================================================================
+
+# --- Configurações de Display (Nomes, Barras de Vida, etc.) ---
+display:
+  # Barra de vida que aparece acima do mob quando ele está em combate.
+  health-bar:
+    length: 20                # Número de caracteres na barra de vida.
+    char-filled: "❚"          # Caractere para a parte preenchida da barra.
+    char-empty: "❚"           # Caractere para a parte vazia da barra.
+    color-filled: "&a"        # Cor da parte preenchida (ex: verde).
+    color-empty: "&c"         # Cor da parte vazia (ex: vermelho).
+    color-brackets: "&7"      # Cor dos colchetes [ ].
+    color-hp-text: "&e"       # Cor do texto de vida (ex: 50/100).
+
+  # Formato para exibir as defesas do mob (quando fora de combate).
+  # Placeholders: {phys} para defesa física, {mag} para defesa mágica.
+  defenses:
+    format: "&7[&bDefP&f: {phys} &7| &dDefM&f: {mag}&7]"
+
+  # --- Configurações de Tarefas (Tasks) ---
+  # Intervalo para verificar se um mob deve sair do estado de combate.
+  combat-timeout-check-interval-ticks: 60 # (20 ticks = 1 segundo)
+  # Tempo em segundos que um mob permanece em combate após a última ação de combate.
+  combat-timeout-seconds: 30
+  # Frequência de atualização dos displays dos mobs.
+  # 1 = a cada tick (mais suave, maior uso de CPU). 2 = a cada 2 ticks, etc.
+  update-interval-ticks: 1
+
+  # Distância MÁXIMA (ao quadrado) para que os displays dos mobs (nomes, etc.) sejam visíveis.
+  # Usar o valor ao quadrado é mais performático (evita raiz quadrada).
+  # Ex: 20*20 = 400 (para 20 blocos), 32*32 = 1024 (para 32 blocos).
+  visibility-distance-squared: 1024 # (Equivalente a 32 blocos)
+
+# --- Sistema de Experiência ---
+experience:
+  # Multiplicador global para a experiência concedida por todos os mobs customizados.
+  global-multiplier: 1.0
+
+# --- Sistema de Spawn ---
+spawning:
+  # Se 'true', impede o spawn natural de mobs vanilla do Minecraft.
+  # Mobs customizados (spawnados via API, comandos, etc.) ainda funcionarão.
+  prevent-vanilla-natural-spawns: true
+
+# --- Perfis de Regeneração Fora de Combate ---
+# Define como os mobs recuperam vida quando não estão em combate.
+# O tempo para um mob ser considerado "fora de combate" é definido por 'combat-timeout-seconds' acima.
+out-of-combat-regen-profiles:
+  # Perfil usado no seu 'meu_mob_forte.yml'
+  fast_regen:
+    interval-ticks: 20    # A cada 20 ticks (1 segundo), o mob tentará regenerar.
+    amount: 5.0           # Quantidade de vida a regenerar POR INTERVALO.
+    is-percentage: false  # 'false' para valor fixo, 'true' para porcentagem da vida máxima.
+
+  # Exemplo de um perfil baseado em porcentagem
+  slow_regen_percent:
+    interval-ticks: 60    # A cada 60 ticks (3 segundos).
+    amount: 0.015         # Regenera 1.5% da vida máxima POR INTERVALO.
+    is-percentage: true
+
+  # Perfil padrão para mobs que não devem regenerar
+  no_regen:
+    interval-ticks: 999999
+    amount: 0
+    is-percentage: false

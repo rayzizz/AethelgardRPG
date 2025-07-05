@@ -1,0 +1,181 @@
+# =====================================================
+#       CHARACTER MODULE MESSAGES (CHARACTER)
+# =====================================================
+
+# --- General Feedback Messages ---
+xp-max-level: "&eYou have already reached the maximum level!"
+xp-gain: "&aYou gained {0} XP!"
+
+character:
+  level-up: "&bCongratulations! You leveled up to {0}!"
+  attribute-points-gained: "&aYou gained {0} attribute points!"
+
+# --- Chat Messages ---
+chat:
+  module:
+    saving-data: "&eSaving player data..."
+    disabled: "&cCharacter Module disabled."
+    actionbar-disabled: "&eAction Bar Display disabled in configuration."
+    actionbar-started: "&aAction Bar Display started."
+    actionbar-stopped: "&eAction Bar Display stopped."
+  regeneration:
+    health-disabled: "&eBase health regeneration disabled in configuration."
+    health-started: "&aBase health regeneration started."
+    mana-disabled: "&eBase mana regeneration disabled in configuration."
+    mana-started: "&aBase mana regeneration started."
+    stamina-disabled: "&eStamina regeneration disabled in configuration."
+    stamina-started: "&aStamina regeneration started."
+  equipment:
+    itemmodule-not-found: "&c[Error] Item Module not found to update equipment attributes for {0}."
+    attributes-updated: "&aYour attributes have been updated based on your equipment."
+  attributes:
+    reset-fail-invalid-data: "&c[Error] Failed to reset attributes for {0}: invalid data."
+  creation:
+    class-selected: "&aYou chose the class: {0}!"
+    error-saving: "&cAn error occurred while saving your class choice."
+  sprint:
+    no-stamina: "&cYou don't have enough stamina to sprint!"
+
+# --- Level Up Effect Configurations ---
+leveling:
+  title: "&6&lLEVEL UP!"
+  subtitle: "&eYou reached level {0}!"
+  invalid-sound-config: "&c[Invalid Configuration] Sound '{0}' for level up not found. Using default."
+  invalid-particle-config: "&c[Invalid Configuration] Particle '{0}' for level up not found."
+
+# --- Profile Compass ---
+profile_compass:
+  name: "&bProfile Compass"
+  lore:
+    - "&7Right-click"
+    - "&7to open your profile."
+  invalid-slot-config: "&c[Invalid Configuration] Compass slot '{0}' is invalid. Using default (8)."
+
+# --- Accessory Slots ---
+accessory_slot:
+  placeholder:
+    name: "&8Empty Accessory Slot"
+
+# --- GUIs ---
+gui:
+  profile:
+    title: "Profile of {0}"
+    no-data: "&cCould not load profile data for {0}."
+    attribute-increased: "&aYour {0} attribute has been increased!"
+    no-attribute-points: "&cYou have no attribute points to spend."
+    item:
+      player-info:
+        name: "&e{0}'s Information"
+        lore:
+          class: "&7Class: &f{0}"
+          level: "&7Level: &f{0}"
+          experience: "&7Experience: &f{0} / {1}"
+          money: "&7Money: &f${0}"
+          attribute-points: "&7Attribute Points: &a{0}"
+      attribute:
+        strength:
+          name: "&cStrength"
+          name-raw: "Strength"
+          lore:
+            value: "&7Current Value: &f{0}"
+        intelligence:
+          name: "&9Intelligence"
+          name-raw: "Intelligence"
+          lore:
+            value: "&7Current Value: &f{0}"
+        faith:
+          name: "&eFaith"
+          name-raw: "Faith"
+          lore:
+            value: "&7Current Value: &f{0}"
+        dexterity:
+          name: "&aDexterity"
+          name-raw: "Dexterity"
+          lore:
+            value: "&7Current Value: &f{0}"
+        agility:
+          name: "&bAgility"
+          name-raw: "Agility"
+          lore:
+            value: "&7Current Value: &f{0}"
+        lore: # Generic key for all attributes
+          click-to-increase: "&aClick to increase."
+      combat-info:
+        name: "&6Combat Information"
+        lore:
+          health: "&cHealth: &f{0} / {1}"
+          mana: "&9Mana: &f{0} / {1}"
+          stamina: "&eStamina: &f{0} / {1}"
+          physical-defense: "&7Physical Defense: &f{0}"
+          magical-defense: "&7Magical Defense: &f{0}"
+      professions:
+        name: "&dProfessions"
+        lore:
+          header: "&7Skill Levels:"
+          entry: "&e{0}: &f{1} &7(&e{2} XP&7)"
+      crystal-skill:
+        name: "&bCrystal of Reconfiguration"
+        lore:
+          description: "&7Manage your attribute points."
+          right-click-reset: "&eRight-Click to reset."
+      skill-tree:
+        name: "&aSkill Tree"
+        lore: "&7(Coming Soon)"
+      tome:
+        name: "&5Tome of Knowledge"
+        lore: "&7(Coming Soon)"
+      crates-cosmetics:
+        name: "&6Crates and Cosmetics"
+        lore: "&7(Coming Soon)"
+      view-guild:
+        name: "&bView Guild"
+        lore: "&7(Coming Soon)"
+      recruit-friend:
+        name: "&aRecruit Friend"
+        lore: "&7(Coming Soon)"
+      daily-reward:
+        name: "&eDaily Reward"
+        lore: "&7(Coming Soon)"
+  creation:
+    title: "Character Creation - Choose Your Class"
+    item:
+      attributes-header: "&6Base Attributes:"
+      health: " &7- Health: &c{0}"
+      mana: " &7- Mana: &9{0}"
+      strength: " &7- Strength: &f{0}"
+      intelligence: " &7- Intelligence: &f{0}"
+      faith: " &7- Faith: &f{0}"
+      dexterity: " &7- Dexterity: &f{0}"
+      agility: " &7- Agility: &f{0}"
+      physical-defense: " &7- Physical Defense: &f{0}"
+      magical-defense: " &7- Magical Defense: &f{0}"
+      lore:
+        separator: "&m-------------------------"
+        style-header: "&6Playstyle:"
+        style:
+          guerreiro: " &7Robust melee combatant."
+          mago: " &7Ranged damage caster."
+          arqueiro: " &7Expert in ranged combat with bows."
+          clerigo: " &7Divine support and healing."
+          assassino: " &7Swift damage and evasion."
+          necromante: " &7Dark magic and minions."
+      click-to-select: "&eClick to select this class!"
+      exit-button:
+        name: "&c&lExit Server"
+        lore: "&7If you do not wish to create a character now, click here to leave."
+        kick-message: "&cYou have left the server. Please create a character next time you join!"
+  attribute_reset_confirm:
+    title: "&4Confirm Attribute Reset"
+    info:
+      name: "&eReset Information"
+      lore1: "&7Resetting your attributes will refund"
+      lore2: "&7all spent points and reset your base"
+      lore3: "&7attributes. You will have &a{0} &7points."
+    confirm:
+      name: "&a&lCONFIRM"
+      lore: "&7Click to reset your attributes."
+    cancel:
+      name: "&c&lCANCEL"
+      lore: "&7Click to return to your profile."
+    success: "&aYour attributes have been reset!"
+    cancelled: "&cAttribute reset cancelled."

@@ -1,0 +1,181 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE PERSONAGEM (CHARACTER)
+# =====================================================
+
+# --- Mensagens Gerais de Feedback ---
+xp-max-level: "&eVocê já alcançou o nível máximo!"
+xp-gain: "&aVocê ganhou {0} XP!"
+
+character:
+  level-up: "&bParabéns! Você subiu para o nível {0}!"
+  attribute-points-gained: "&aVocê ganhou {0} pontos de atributo!"
+
+# --- Mensagens de Chat ---
+chat:
+  module:
+    saving-data: "&eSalvando dados dos jogadores..."
+    disabled: "&cMódulo de Personagem desabilitado."
+    actionbar-disabled: "&eDisplay da Action Bar desabilitado na configuração."
+    actionbar-started: "&aDisplay da Action Bar iniciado."
+    actionbar-stopped: "&eDisplay da Action Bar parado."
+  regeneration:
+    health-disabled: "&eRegeneração base de vida desabilitada na configuração."
+    health-started: "&aRegeneração base de vida iniciada."
+    mana-disabled: "&eRegeneração base de mana desabilitada na configuração."
+    mana-started: "&aRegeneração base de mana iniciada."
+    stamina-disabled: "&eRegeneração de stamina desabilitada na configuração."
+    stamina-started: "&aRegeneração de stamina iniciada."
+  equipment:
+    itemmodule-not-found: "&c[Erro] Módulo de Itens não encontrado para atualizar atributos de equipamento para {0}."
+    attributes-updated: "&aSeus atributos foram atualizados com base no seu equipamento."
+  attributes:
+    reset-fail-invalid-data: "&c[Erro] Falha ao resetar atributos para {0}: dados inválidos."
+  creation:
+    class-selected: "&aVocê escolheu a classe: {0}!"
+    error-saving: "&cOcorreu um erro ao salvar a sua escolha de classe."
+  sprint:
+    no-stamina: "&cVocê não tem stamina suficiente para sprintar!"
+
+# --- Configurações de Efeitos de Level Up ---
+leveling:
+  title: "&6&lSUBIU DE NÍVEL!"
+  subtitle: "&eVocê alcançou o nível {0}!"
+  invalid-sound-config: "&c[Configuração Inválida] Som '{0}' para level up não encontrado. Usando padrão."
+  invalid-particle-config: "&c[Configuração Inválida] Partícula '{0}' para level up não encontrada."
+
+# --- Bússola de Perfil ---
+profile_compass:
+  name: "&bBússola do Perfil"
+  lore:
+    - "&7Clique com o botão direito"
+    - "&7para abrir seu perfil."
+  invalid-slot-config: "&c[Configuração Inválida] Slot da bússola '{0}' é inválido. Usando padrão (8)."
+
+# --- Slots de Acessório ---
+accessory_slot:
+  placeholder:
+    name: "&8Slot de Acessório Vazio"
+
+# --- GUIs ---
+gui:
+  profile:
+    title: "Perfil de {0}"
+    no-data: "&cNão foi possível carregar os dados do perfil para {0}."
+    attribute-increased: "&aSeu atributo de {0} foi aumentado!"
+    no-attribute-points: "&cVocê não tem pontos de atributo para gastar."
+    item:
+      player-info:
+        name: "&eInformações de {0}"
+        lore:
+          class: "&7Classe: &f{0}"
+          level: "&7Nível: &f{0}"
+          experience: "&7Experiência: &f{0} / {1}"
+          money: "&7Dinheiro: &f${0}"
+          attribute-points: "&7Pontos de Atributo: &a{0}"
+      attribute:
+        strength:
+          name: "&cForça"
+          name-raw: "Força"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        intelligence:
+          name: "&9Inteligência"
+          name-raw: "Inteligência"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        faith:
+          name: "&eFé"
+          name-raw: "Fé"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        dexterity:
+          name: "&aDestreza"
+          name-raw: "Destreza"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        agility:
+          name: "&bAgilidade"
+          name-raw: "Agilidade"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        lore: # Chave genérica para todos os atributos
+          click-to-increase: "&aClique para aumentar."
+      combat-info:
+        name: "&6Informações de Combate"
+        lore:
+          health: "&cVida: &f{0} / {1}"
+          mana: "&9Mana: &f{0} / {1}"
+          stamina: "&eStamina: &f{0} / {1}"
+          physical-defense: "&7Defesa Física: &f{0}"
+          magical-defense: "&7Defesa Mágica: &f{0}"
+      professions:
+        name: "&dProfissões"
+        lore:
+          header: "&7Níveis de Habilidade:"
+          entry: "&e{0}: &f{1} &7(&e{2} XP&7)"
+      crystal-skill:
+        name: "&bCristal de Reconfiguração"
+        lore:
+          description: "&7Gerencie seus pontos de atributo."
+          right-click-reset: "&eClique Direito para resetar."
+      skill-tree:
+        name: "&aÁrvore de Habilidades"
+        lore: "&7(Em breve)"
+      tome:
+        name: "&5Tomo de Conhecimento"
+        lore: "&7(Em breve)"
+      crates-cosmetics:
+        name: "&6Caixas e Cosméticos"
+        lore: "&7(Em breve)"
+      view-guild:
+        name: "&bVer Guilda"
+        lore: "&7(Em breve)"
+      recruit-friend:
+        name: "&aRecrutar Amigo"
+        lore: "&7(Em breve)"
+      daily-reward:
+        name: "&eRecompensa Diária"
+        lore: "&7(Em breve)"
+  creation:
+    title: "Criação de Personagem - Escolha Sua Classe"
+    item:
+      attributes-header: "&6Atributos Base:"
+      health: " &7- Vida: &c{0}"
+      mana: " &7- Mana: &9{0}"
+      strength: " &7- Força: &f{0}"
+      intelligence: " &7- Inteligência: &f{0}"
+      faith: " &7- Fé: &f{0}"
+      dexterity: " &7- Destreza: &f{0}"
+      agility: " &7- Agilidade: &f{0}"
+      physical-defense: " &7- Def. Física: &f{0}"
+      magical-defense: " &7- Def. Mágica: &f{0}"
+      lore:
+        separator: "&m-------------------------"
+        style-header: "&6Estilo de Jogo:"
+        style:
+          guerreiro: " &7Combatente corpo a corpo robusto."
+          mago: " &7Conjurador de dano à distância."
+          arqueiro: " &7Perito em combate à distância com arcos."
+          clerigo: " &7Suporte divino e cura."
+          assassino: " &7Dano rápido e evasão."
+          necromante: " &7Magia negra e lacaios."
+      click-to-select: "&eClique para selecionar esta classe!"
+      exit-button:
+        name: "&c&lSair do Servidor"
+        lore: "&7Se você não deseja criar um personagem agora, clique aqui para sair."
+        kick-message: "&cVocê saiu do servidor. Crie um personagem na próxima vez que entrar!"
+  attribute_reset_confirm:
+    title: "&4Confirmar Reset de Atributos"
+    info:
+      name: "&eInformação sobre o Reset"
+      lore1: "&7Resetar seus atributos irá devolver"
+      lore2: "&7todos os pontos gastos e redefinir"
+      lore3: "&7seus atributos base. Você terá &a{0} &7pontos."
+    confirm:
+      name: "&a&lCONFIRMAR"
+      lore: "&7Clique para resetar seus atributos."
+    cancel:
+      name: "&c&lCANCELAR"
+      lore: "&7Clique para voltar ao perfil."
+    success: "&aSeus atributos foram resetados!"
+    cancelled: "&cReset de atributos cancelado."

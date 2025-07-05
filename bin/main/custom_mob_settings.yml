@@ -1,0 +1,47 @@
+# ===================================================================
+#       CONFIGURAÇÕES DO MÓDULO DE MOBS CUSTOMIZADOS
+# ===================================================================
+
+# --- Configurações de Display (Nomes, Barras de Vida, etc.) ---
+display:
+  # Barra de vida que aparece acima do mob quando ele está em combate.
+  health-bar:
+    length: 20                # Número de caracteres na barra de vida.
+    char-filled: "❚"          # Caractere para a parte preenchida da barra.
+    char-empty: "❚"           # Caractere para a parte vazia da barra.
+    color-filled: "&a"        # Cor da parte preenchida (ex: verde).
+    color-empty: "&c"         # Cor da parte vazia (ex: vermelho).
+    color-brackets: "&7"      # Cor dos colchetes [ ].
+    color-hp-text: "&e"       # Cor do texto de vida (ex: 50/100).
+
+  # Formato para exibir as defesas do mob (quando fora de combate).
+  # Placeholders: {phys} para defesa física, {mag} para defesa mágica.
+  defenses:
+    format: "&7[&bDefP&f: {phys} &7| &dDefM&f: {mag}&7]"
+
+  # --- Configurações de Tarefas (Tasks) ---
+  # Intervalo para verificar se um mob deve sair do estado de combate.
+  combat-timeout-check-interval-ticks: 20 # (20 ticks = 1 segundo)
+  # Tempo em segundos que um mob permanece em combate após a última ação de combate.
+  combat-timeout-seconds: 5
+  # Frequência de atualização dos displays dos mobs (ArmorStands).
+  # 1 = a cada tick (mais suave, maior uso de CPU). 2 = a cada 2 ticks, etc.
+  update-interval-ticks: 1
+
+  # --- NOVO: Configuração de Visibilidade ---
+  # Distância MÁXIMA (ao quadrado) para que os displays dos mobs (nomes, etc.) sejam visíveis.
+  # Usar o valor ao quadrado é mais performático (evita raiz quadrada).
+  # Ex: 20*20 = 400 (para 20 blocos), 32*32 = 1024 (para 32 blocos).
+  visibility-distance-squared: 1024 # (Equivalente a 32 blocos)
+
+# --- Sistema de Experiência ---
+experience:
+  # Multiplicador global para a experiência concedida por todos os mobs customizados.
+  global-multiplier: 1.0
+
+# --- Sistema de Spawn ---
+spawning:
+  # Se 'true', impede o spawn natural de mobs vanilla do Minecraft.
+  # Mobs customizados (spawnados via API, comandos, etc.) ainda funcionarão.
+  # Útil para ter controle total sobre os spawns no seu mundo.
+  prevent-vanilla-natural-spawns: true

@@ -1,0 +1,42 @@
+# plugins/AethelgardRPG/mobs/abilities/charge_strike.yml
+id: "charge_strike"
+display-name: "&eInvestida Poderosa"
+type: "MELEE_DASH_ATTACK" # Um novo tipo para identificar essa mecânica específica
+cooldown-ticks: 160 # 8 segundos
+target-type: "ENEMY_PLAYER" # Alvo principal são jogadores
+range: 15.0 # Distância máxima para o mob iniciar a habilidade
+hit-chance: 0.85 # 85% de chance da habilidade ser "bem-sucedida" ao ser disparada
+player-dodgeable: true # Indica se o jogador pode tentar esquivar desta habilidade
+
+description:
+  - "&7O mob foca em um alvo,"
+  - "&7carrega energia e avança rapidamente,"
+  - "&7causando dano e repulsão ao impacto."
+
+parameters:
+  # Fase de Carga
+  charge-duration-ticks: 30 # 1.5 segundos de tempo de carga
+  charge-particle-effect: "CRIT" # Partícula emitida pelo mob durante a carga
+  charge-particle-count: 15
+  charge-particle-offset: 0.5 # Dispersão da partícula
+  charge-sound-effect: "ENTITY_ENDER_DRAGON_GROWL" # Som ao iniciar a carga
+  charge-sound-volume: 0.8
+  charge-sound-pitch: 1.2
+
+  # Fase de Avanço (Dash)
+  dash-speed-multiplier: 2.5 # Quão mais rápido o mob se move durante o dash (ex: 2.5x a velocidade normal)
+  max-dash-distance: 10.0 # Distância máxima que o dash percorrerá, mesmo que o alvo se mova mais
+  dash-particle-trail: "SMOKE" # Partícula de rastro durante o dash
+  dash-sound-effect: "ENTITY_PLAYER_ATTACK_SWEEP" # Som durante o dash
+  dash-sound-volume: 1.0
+  dash-sound-pitch: 0.8
+
+  # Fase de Impacto
+  impact-damage-amount: 35.0 # Dano base do impacto
+  impact-damage-type: "PHYSICAL" # Tipo de dano para resistências
+  impact-radius: 1.5 # Raio para dano em área ou para acertar o alvo
+  impact-knockback-strength: 1.2 # Multiplicador da força da repulsão (0 = sem repulsão)
+  impact-particle-effect: "EXPLOSION" # Partícula no local do impacto
+  impact-sound-effect: "ENTITY_GENERIC_EXPLODE" # Som do impacto
+  impact-sound-volume: 1.0
+  impact-sound-pitch: 1.0

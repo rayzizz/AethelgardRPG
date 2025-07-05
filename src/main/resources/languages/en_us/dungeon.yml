@@ -1,0 +1,38 @@
+# =====================================================
+#       DUNGEON MODULE MESSAGES (DUNGEON)
+# =====================================================
+
+# --- Command Messages ---
+usage: "&cUsage: /dungeon <enter|leave|group|list>..."
+enter-usage: "&cUsage: /dungeon enter <dungeon_id>"
+
+# --- Dungeon Entry/Exit Messages ---
+entered: "&aYou entered the dungeon: {0}!"
+left: "&aYou left the dungeon: {0}."
+already-in-dungeon: "&cYou are already in a dungeon."
+dungeon-not-found: "&cDungeon '{0}' not found."
+template-not-found: "&cDungeon with ID '{0}' not found." # Used by the 'enter' command
+
+# --- Dungeon Failure/Success Messages ---
+failed: "&cDungeon '{0}' failed. Reason: {1}"
+time-expired-fail: "&cThe time limit for dungeon '{0}' has expired!"
+completed: "&6Dungeon '{0}' completed successfully!"
+
+# --- Group Requirements Messages ---
+group:
+  min-players: "&cYour group needs at least {0} player(s) to enter this dungeon."
+  max-players: "&cYour group cannot have more than {0} player(s) to enter this dungeon."
+
+# --- Player Requirements Messages ---
+requirements:
+  level-too-low: "&cYou need to be level {0} to enter this dungeon."
+
+# --- Time Messages ---
+time-left: "&eTime remaining in dungeon: {0} minute(s)." # Used in action bar timer or chat
+
+# --- Reward Messages ---
+rewards:
+  completed: "&aRewards for completing dungeon '{0}':"
+  xp: "&a+ {0} XP"
+  money: "&6+ ${0}"
+  item: "&a+ {0} x{1}" # Ex: + Legendary Sword x1

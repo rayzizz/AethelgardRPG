@@ -1,0 +1,17 @@
+id: test_weapons/mago_test_weapon
+name-key: "item.custom_items.mago_test_weapon.name"
+lore-key: "item.custom_items.mago_test_weapon.lore"
+material: BLAZE_ROD
+rarity: RARO
+max-stack-size: 1
+is-rpg-item: true
+visual:
+  custom-model-data: 15
+requirements:
+  level: 1
+  class: MAGO
+identified: true
+stats:
+  intelligence-bonus: 7
+  mana-bonus: 20
+  magical-damage: 15 # Dano mágico base da arma

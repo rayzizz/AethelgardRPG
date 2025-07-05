@@ -1,0 +1,24 @@
+# plugins/AethelgardRPG/mobs/abilities/self_heal.yml
+id: "self_heal"
+display-name: "&aCura Restauradora"
+type: "SELF_HEAL"
+cooldown-ticks: 300 # 15 seconds
+target-type: "SELF"
+range: 0 # No range needed
+description:
+  - "&7O mob se cura por uma"
+  - "&7quantidade significativa."
+parameters:
+  # Use 'heal-percentage' para curar uma porcentagem da vida máxima,
+  # ou 'heal-amount' para uma cura fixa. 'heal-percentage' tem prioridade.
+  heal-percentage: 25.0 # Cura 25% da vida máxima
+  # heal-amount: 50.0 # Cura 50 de vida
+  particle-effect: "HEART"
+  particle-count: 15
+  particle-offset-x: 0.5
+  particle-offset-y: 1.0
+  particle-offset-z: 0.5
+  particle-speed: 0.1
+  sound-effect: "ENTITY_ZOMBIE_VILLAGER_CURE"
+  sound-volume: 1.0
+  sound-pitch: 1.2

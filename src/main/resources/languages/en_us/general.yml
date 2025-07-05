@@ -1,0 +1,36 @@
+# =====================================================
+#       GENERAL PLUGIN MESSAGES
+# =====================================================
+
+# --- Information and Commands ---
+plugin-info: "&a{0} &7v{1} by Ray."
+no-permission: "&cYou do not have permission to do that."
+player-not-found: "&cPlayer '{0}' not found or is offline."
+player-only-command: "&cThis command can only be executed by a player."
+unknown-command: "&cUnknown command. Use /rpg help to see the commands."
+unknown-subcommand: "&cUnknown subcommand: {0}."
+module-not-found: "&cModule '{0}' not found or disabled."
+reload-success: "&aAethelgardRPG configurations and languages reloaded successfully!"
+reloading-modules: "&eReloading modules..."
+
+# --- Item and Slot Interaction ---
+cannot-drop-item: "&cYou cannot drop this item."
+cannot-move-item: "&cYou cannot move this item."
+cannot-place-in-slot: "&cYou cannot place items in this slot."
+cannot-place-non-accessory-in-slot: "&cYou can only place accessories in this slot."
+cannot-drag-non-accessory-to-slot: "&cYou cannot drag a non-accessory item to this slot."
+
+# --- Language Command (/lang) ---
+lang:
+  usage: "&cUsage: /lang <language_code>"
+  available: "&eAvailable languages: {0}"
+  changed: "&aLanguage changed to: {0}."
+  not-found: "&cLanguage '{0}' not found. Available: {1}"
+
+# --- NEW: Status and GUI General Messages ---
+status:
+  enabled: "&aENABLED"
+  disabled: "&cDISABLED"
+
+gui:
+  close: "&cClose"

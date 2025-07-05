@@ -1,0 +1,21 @@
+gui:
+  title: 'Suas Preferências'
+  particles:
+    name: '&bPartículas de Magias'
+    lore:
+      - '&7Controla se você vê os efeitos'
+      - '&7visuais detalhados das magias.'
+      - ''
+      - '&7Status Atual: {0}'
+      - ''
+      - '&eClique para alterar.'
+  map_effect_visuals: # Nova chave
+    name: '&cEfeitos Visuais de Mapa' # Novo nome
+    lore:
+      - '&7Controla se magias poderosas'
+      - '&7criam efeitos visuais como blocos voando.'
+      - '&8(Apenas para você)'
+      - ''
+      - '&7Status Atual: {0}'
+      - ''
+      - '&eClique para alterar.'

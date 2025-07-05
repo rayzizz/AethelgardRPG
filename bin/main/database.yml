@@ -1,0 +1,14 @@
+# Configurações do Banco de Dados para AethelgardRPG
+enabled: true
+driver: "com.mysql.cj.jdbc.Driver" # Ex: com.mysql.cj.jdbc.Driver ou org.sqlite.JDBC
+url: "jdbc:mysql://localhost:3306/aethelgardrpg" # Ex: jdbc:mysql://localhost:3306/aethelgardrpg ou jdbc:sqlite:plugins/AethelgardRPG/database.db
+username: "root"
+password: ""
+auto-create-tables: true # Se o plugin deve tentar criar as tabelas automaticamente
+
+pool-settings:
+  max-pool-size: 10
+  min-idle: 5
+  connection-timeout: 30000 # ms
+  idle-timeout: 600000 # ms
+  max-lifetime: 1800000 # ms

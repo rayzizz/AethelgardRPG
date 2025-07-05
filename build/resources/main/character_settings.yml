@@ -1,0 +1,127 @@
+# Configurações do Módulo de Personagem para AethelgardRPG
+
+# --- Sistema de Níveis (Leveling) ---
+leveling:
+  max-level: 100
+  attribute-points-per-level: 3
+  # Fórmula para calcular o XP necessário para o próximo nível.
+  # XP = ( ( (level * level_linear_factor) + exponential_base_value ) ^ (1 + (level / exponential_level_divisor)) / overall_divisor ) * difficulty_multiplier
+  formula:
+    level-linear-factor: 1.0      # Fator linear baseado no nível
+    exponential-base-value: 300.0 # Valor base para o componente exponencial
+    exponential-growth-base: 2.0  # Base do crescimento exponencial (não usado na fórmula atual, mas pode ser útil)
+    exponential-level-divisor: 7.0 # Divisor do nível no expoente (controla quão rápido a curva sobe)
+    overall-divisor: 4.0          # Divisor aplicado ao resultado total (para ajustar a escala geral)
+    difficulty-multiplier: 1.0    # Multiplicador final para ajustar a dificuldade geral
+  # Efeitos visuais e sonoros ao subir de nível.
+  effects:
+    title:
+      enabled: true
+      fade-in-ticks: 10
+      stay-ticks: 70 # Duração em ticks que o título permanece visível
+      fade-out-ticks: 20 # Duração em ticks para o título desaparecer
+    sound:
+      enabled: true
+      name: "ENTITY_PLAYER_LEVELUP" # Nome do som do Bukkit (ex: ENTITY_PLAYER_LEVELUP, ENTITY_FIREWORK_BLAST)
+      volume: 1.0
+      pitch: 1.0
+    particles:
+      enabled: true
+      type: "TOTEM_OF_UNDYING" # Tipo de partícula do Bukkit (ex: TOTEM_OF_UNDYING, VILLAGER_HAPPY, FLAME)
+      count: 50
+      offset-x: 0.5
+      offset-y: 1.0
+      offset-z: 0.5
+      speed: 0.1
+
+# --- Regeneração Base de Vida ---
+base-regeneration:
+  enabled: true # Habilita a regeneração passiva de vida
+  interval-ticks: 100 # Intervalo em ticks para aplicar a regeneração (20 ticks = 1 segundo)
+  amount: 1.0 # Quantidade de vida regenerada por intervalo
+  only-out-of-combat: true # Regenerar apenas se o jogador estiver fora de combate
+  out-of-combat-threshold-seconds: 10 # Segundos sem combate para ser considerado "fora de combate"
+
+# --- Regeneração Base de Mana ---
+base-mana-regeneration:
+  enabled: true # Habilita a regeneração passiva de mana
+  interval-ticks: 80 # Intervalo em ticks para aplicar a regeneração (20 ticks = 1 segundo)
+  amount: 1.5 # Quantidade de mana regenerada por intervalo
+  only-out-of-combat: false # Regenerar apenas se o jogador estiver fora de combate
+  out-of-combat-threshold-seconds: 5 # Segundos sem combate para ser considerado "fora de combate"
+
+# --- NOVO: Sistema de Stamina (Sprint) ---
+base-stamina:
+  base-value: 100.0 # Valor base de stamina para todos os jogadores
+
+base-stamina-regeneration:
+  enabled: true # Habilita a regeneração passiva de stamina
+  interval-ticks: 40 # Intervalo em ticks para aplicar a regeneração (20 ticks = 1 segundo)
+  amount: 5.0 # Quantidade de stamina regenerada por intervalo
+  only-out-of-combat: true # Regenerar apenas se o jogador estiver fora de combate
+  out-of-combat-threshold-seconds: 3 # Segundos sem combate para ser considerado "fora de combate"
+  only-out-of-sprint: true # Regenerar apenas se o jogador NÃO estiver sprintando
+  out-of-sprint-threshold-seconds: 1 # Segundos após parar de sprintar para começar a regenerar
+
+sprint:
+  drain-interval-ticks: 5 # Frequência de consumo de stamina ao sprintar (a cada 0.25 segundos)
+  drain-amount: 2.0 # Quantidade de stamina consumida por intervalo
+  min-stamina-to-start: 5.0 # Stamina mínima para iniciar o sprint (valor absoluto)
+  min-stamina-percentage-to-start: 0.3 # NOVO: Stamina mínima para iniciar o sprint (valor percentual, 0.3 = 30%)
+
+# --- Bússola de Perfil (Profile Compass) ---
+profile_compass:
+  enabled: true # Se a bússola de perfil deve ser dada aos jogadores
+  slot: 8 # Slot da hotbar onde a bússola será colocada (0-8, 8 é o último slot)
+
+# --- Slots de Acessório ---
+accessory-slots:
+  enabled: true # Habilita os slots de acessório reservados no inventário do jogador
+  # Lista de slots do inventário do jogador que serão reservados para acessórios.
+  # Slots do inventário principal: 9-35.
+  # Exemplo: [18, 19, 20] para os 3 primeiros slots da segunda linha do inventário.
+  reserved: [9, 10, 11, 12] # Deixe vazio para não ter slots reservados
+  # Se true, painéis de vidro escuros serão colocados nos slots reservados quando vazios.
+  use-placeholder-panes: false
+
+# --- Display da Action Bar ---
+actionbar-display:
+  enabled: true # Habilita o display de status na action bar
+  update-interval-ticks: 20 # Frequência de atualização em ticks (20 ticks = 1 segundo)
+  # Formato da action bar. Use placeholders:
+  # {health_display}, {mana_display}, {defense_display}, {separator_display}
+  format: "{health_display} {separator_display} {mana_display} {separator_display} {defense_display}"
+
+  health:
+    prefix: "&c❤ " # Prefixo para o display de vida
+    suffix: "" # Sufixo para o display de vida
+    text-color: "&c" # Cor do texto de vida (ex: 100/100)
+    use-visual-bar: false # Se deve usar uma barra visual (❚❚❚) ou texto (100/100)
+    visual-bar-length: 10 # Comprimento da barra visual
+    visual-bar-char-filled: "❤" # Caractere para a parte preenchida da barra
+    visual-bar-char-empty: "♡" # Caractere para a parte vazia da barra
+    visual-bar-color-filled: "&c" # Cor da parte preenchida da barra
+    visual-bar-color-empty: "&7" # Cor da parte vazia da barra
+
+  mana:
+    prefix: "&9★ " # Prefixo para o display de mana
+    suffix: "" # Sufixo para o display de mana
+    text-color: "&9" # Cor do texto de mana (ex: 50/50)
+    use-visual-bar: false # Se deve usar uma barra visual (❚❚❚) ou texto (50/50)
+    visual-bar-length: 10 # Comprimento da barra visual
+    visual-bar-char-filled: "★" # Caractere para a parte preenchida da barra
+    visual-bar-char-empty: "☆" # Caractere para a parte vazia da barra
+    visual-bar-color-filled: "&9" # Cor da parte preenchida da barra
+    visual-bar-color-empty: "&7" # Cor da parte vazia da barra
+
+  separator:
+    display: "&7|" # Caractere separador entre os displays (ex: |)
+
+  defense:
+    prefix: "" # Prefixo para o display de defesa
+    suffix: "" # Sufixo para o display de defesa
+    physical-prefix: "&7🛡 " # Prefixo para a defesa física
+    physical-text-color: "&f" # Cor do texto da defesa física
+    magical-prefix: "&9🔮 " # Prefixo para a defesa mágica
+    magical-text-color: "&f" # Cor do texto da defesa mágica
+    separator: "&8/" # Separador entre defesa física e mágica (ex: /)

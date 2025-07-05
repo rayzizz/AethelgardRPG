@@ -1,0 +1,55 @@
+# Configurações de Combate para AethelgardRPG
+
+# --- Esquiva (Dodge) ---
+# Configurações para o sistema de esquiva do jogador.
+# A chance final de esquiva é calculada como: base-chance + (agilidade * agility-scaling-factor),
+# limitada por max-chance.
+dodge:
+  base-chance: 0.00 # Chance base de esquiva (0.0 a 1.0, ex: 0.05 para 5%)
+  agility-scaling-factor: 0.005 # Quanto cada ponto de agilidade contribui para a chance de esquiva (ex: 0.005 = 0.5% por ponto)
+  max-chance: 0.75 # Chance máxima de esquiva (0.0 a 1.0, ex: 0.75 = 75%)
+
+# --- Cálculo de Dano ---
+# Configurações que influenciam como o dano é calculado ao atacar.
+damage-calculation:
+  # Multiplicador de Força para dano físico.
+  # Dano Físico Adicional = Força Total do Atacante * strength-physical-damage-scaling
+  strength-physical-damage-scaling: 0.2 # Cada ponto de Força adiciona 0.2 de dano físico.
+  # Multiplicador de Inteligência para dano mágico.
+  # Dano Mágico Adicional = Inteligência Total do Atacante * intelligence-magical-damage-scaling
+  intelligence-magical-damage-scaling: 0.3 # Cada ponto de Inteligência adiciona 0.3 de dano mágico.
+  # Dano base aplicado por um soco (ataque sem arma).
+  base-punch-damage: 1.0 # Dano base de um soco.
+
+# --- Redução de Dano (Defesa) ---
+# Configurações que influenciam como o dano é mitigado pela defesa.
+damage-reduction:
+  # Constante usada na fórmula de redução de dano.
+  # Fórmula: DanoFinal = DanoOriginal * (formula-constant / (formula-constant + Defesa))
+  # Um valor maior para esta constante torna a defesa menos eficaz por ponto.
+  formula-constant: 100.0
+
+# --- Tipos de Dano Mágico ---
+# Lista de causas de dano do Bukkit (org.bukkit.event.entity.EntityDamageEvent.DamageCause)
+# que são consideradas "mágicas" para fins de cálculo de defesa.
+# Danos com causas nesta lista serão mitigados pela Defesa Mágica do alvo.
+magical-damage-causes:
+  - "MAGIC"
+  - "POISON"
+  - "WITHER"
+  - "DRAGON_BREATH"
+  # Adicione outras causas de dano que você considera mágicas aqui (ex: FIRE, LAVA, etc., se quiser que sejam mitigadas por defesa mágica).
+
+# --- Escalonamento de Atributos para Stats Secundários ---
+# Define como os atributos primários (Força, Inteligência, etc.) contribuem para os stats secundários
+# que são diretamente relevantes para o combate (Vida Máxima, Mana Máxima).
+attribute-scaling:
+  # Multiplicador de Força para Vida Máxima.
+  # Vida Máxima Adicional = Força Total do Jogador * strength-to-health-scaling
+  strength-to-health-scaling: 2.0 # Cada ponto de Força adiciona 2.0 de vida máxima.
+  # Multiplicador de Inteligência para Mana Máxima.
+  # Mana Máxima Adicional = Inteligência Total do Jogador * intelligence-to-mana-scaling
+  intelligence-to-mana-scaling: 3.0 # Cada ponto de Inteligência adiciona 3.0 de mana máxima.
+  # NOVO: Multiplicador de Agilidade para Stamina Máxima.
+  # Stamina Máxima Adicional = Agilidade Total do Jogador * agility-to-stamina-scaling
+  agility-to-stamina-scaling: 2.0 # Cada ponto de Agilidade adiciona 2.0 de stamina máxima.

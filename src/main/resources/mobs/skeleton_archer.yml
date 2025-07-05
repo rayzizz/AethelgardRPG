@@ -1,0 +1,23 @@
+# plugins/AethelgardRPG/mobs/skeleton_archer.yml
+id: "skeleton_archer"
+display-name: "&eArqueiro Esqueleto"
+base-entity-type: "SKELETON"
+stats:
+  level: 5
+  max-health: 40.0
+  base-damage: 5.0 # Dano base (agora usado pelo ataque de arco nativo)
+  physical-defense: 10.0
+  magical-defense: 5.0
+  xp-on-kill: 15.0
+visual:
+  custom-model-data: 0
+behavior:
+  ai-type: AGGRESSIVE_RANGED
+  has-gravity: true
+  aggro-range: 25.0
+  attack-speed-modifier: 1.5
+  out-of-combat-regen-profile: "default"
+abilities: [] # <-- CORREÇÃO: Lista vazia. O ataque é feito pela IA nativa.
+drops:
+  - "minecraft:arrow 5-10 1.0"
+  - "minecraft:bone 1-2 0.8"

@@ -1,0 +1,144 @@
+# ==================================================
+#       SPELL MODULE MESSAGES
+# ==================================================
+
+# --- General Casting Messages ---
+cast:
+  success: "&aYou have cast {0}!"
+  fail:
+    generic: "&cFailed to cast {0}."
+    player_data_missing: "&c[System Error] Could not find your character data."
+    spell_not_found: "&c[System Error] Spell with ID '{0}' was not found."
+    wrong_class: "&cYou must be a {0} to use this spell."
+    wrong_weapon: "&cYou are not holding the correct weapon for this spell."
+    cooldown: "&e{0} is on cooldown. Wait {1} more second(s)."
+    no_mana: "&cYou don't have enough mana for {0}. Cost: {1} mana."
+
+# --- Combo System ---
+combo:
+  cast_success: "&a{0} combo executed!"
+  cast_fail: "&c{0} combo failed!"
+  no_spell_assigned: "&cNo spell assigned to the combo {0} for your class."
+
+# --- Spell Learning and Assignment ---
+learn:
+  success: "&aYou have learned the spell: {0}!"
+  already_known: "&eYou already know the spell: {0}."
+  fail:
+    invalid_spell: "&c[System Error] Spell with ID '{0}' does not exist."
+
+unlearn:
+  success: "&eYou have forgotten the spell: {0}."
+  not_known: "&cYou did not know the spell {0} to be able to forget it."
+  fail:
+    invalid_spell: "&c[System Error] Spell with ID '{0}' does not exist."
+
+admin_command:
+  usage: "&cUsage: /aspell <learn|unlearn> <player> <spell_id>"
+  player_not_found: "&cPlayer '{0}' not found or is not online."
+  spell_not_found: "&cSpell with ID '{0}' does not exist."
+  learn_success_sender: "&a{1} has learned the spell '{0}'."
+  learn_fail_sender: "&cFailed to teach the spell '{0}' to {1} (do they already know it?)."
+  unlearn_success_sender: "&e{1} has forgotten the spell '{0}'."
+  unlearn_fail_sender: "&cFailed to remove the spell '{0}' from {1} (did they not know it?)."
+
+assign:
+  success: "&aSpell {0} successfully assigned to combo {1}!"
+  fail:
+    no_class: "&cYou must have a class selected to assign spells."
+    invalid_spell: "&c[System Error] Spell with ID '{0}' does not exist."
+    not_known: "&cYou do not know the spell {0}. Learn it first!"
+    wrong_class: "&cThe spell {0} does not belong to your current class."
+
+unassign:
+  success: "&eSpell {0} unassigned from combo {1}."
+
+# --- General Module Errors ---
+error:
+  custom_mob_module_missing: "&c[System Error] The Custom Mobs module is not working."
+  player_data_missing: "&c[System Error] Could not find your character data."
+
+# --- Spellbook GUI Texts ---
+gui:
+  title: "Spellbook"
+  no_class: "&cYou need a class to open your spellbook."
+  assign:
+    prompt: "&e&lASSIGN SPELL: &r&eClick on the desired combo slot."
+    prompt_unassign: "&c&lREMOVE SPELL: &r&cClick on a combo to clear it."
+    cancel: "&cSpell assignment canceled."
+    cancel_unassign: "&eSpell removal canceled."
+    fail_unassign_empty: "&cYou must click on an assigned spell to unbind it."
+    unassign_right_click_hint: "&eRight-click the 'Unassign a Spell' button to enter removal mode."
+  buttons:
+    view_all_spells:
+      name: "&aView Known Spells"
+      lore:
+        - "&7Click to see all the spells"
+        - "&7you have learned and can assign."
+    unassign_spell:
+      name: "&cUnassign a Spell"
+      lore_right_click:
+        - "&7Right-click to enter removal mode"
+        - "&7and clear a combo slot."
+    exit_gui:
+      name: "&cExit Spellbook"
+      lore:
+        - "&7Click to close the spellbook."
+  item:
+    mana_cost: "&eMana Cost: &b{0}"
+    cooldown: "&eCooldown: &b{0}s"
+    assign_lore: "&aClick to assign to a combo."
+    unassign_lore: "&cClick to unassign."
+    empty_combo:
+      name: "&eEmpty Combo Slot: &f{0}"
+      lore:
+        - "&7Assign a spell to this combo"
+        - "&7through the known spells book."
+  known_spells:
+    title: "Your Known Spells"
+    back_button: "&cBack to Spellbook"
+    previous_page: "&ePrevious Page"
+    next_page: "&eNext Page"
+
+# ==================================================
+#       SPECIFIC SPELL DEFINITIONS
+# ==================================================
+
+# --- Warrior Spells ---
+warrior:
+  spinning_fury:
+    name: "Spinning Fury"
+    description: "Perform a quick spin with your weapon, hitting all nearby enemies."
+    success: "&aYou hit {0} target(s) with Spinning Fury!"
+    no_targets_hit: "&eSpinning Fury did not hit any targets."
+  taunt:
+    name: "Mass Taunt"
+    description: "Forces all enemies within a {0} meter radius to attack you for {1} seconds."
+    success: "&aYou have taunted &e{0} &aenemies!"
+    no_targets: "&cYou did not taunt any enemies."
+  heroic_leap:
+    name: "Heroic Leap"
+    description: "Leap high into the air and deal {0} area damage in a {1} radius upon landing."
+    success: "You performed a Heroic Leap!"
+
+# --- Mage Spells ---
+mage:
+  freezing_ray:
+    name: "Freezing Ray"
+    description: "Fires a ray of ice that deals damage and slows the target."
+    no_target: "&cYour Freezing Ray did not find a target."
+    success: "&bYou froze {0} with your Freezing Ray!"
+
+# --- Necromancer Spells ---
+necromancer:
+  summon_skeleton:
+    name: "Summon Skeleton Minion"
+    description: "Summons a loyal skeleton to fight by your side."
+    success: "&aYou have summoned {0} loyal skeleton(s)!"
+    fail: "&cFailed to summon skeletons."
+    minion-ingame-name: "&8[&7{0}&8] &fSkeleton &a{1} &7({2}s)" # {0}=Owner, {1}=Health, {2}=Time
+
+# --- Minion Names ---
+minion:
+  skeleton:
+    base_name: "Allied Skeleton"

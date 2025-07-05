@@ -1,0 +1,21 @@
+gui:
+  title: 'Your Preferences'
+  particles:
+    name: '&bSpell Particles'
+    lore:
+      - '&7Controls whether you see detailed'
+      - '&7visual effects of spells.'
+      - ''
+      - '&7Current Status: {0}'
+      - ''
+      - '&eClick to toggle.'
+  map_effect_visuals: # Nova chave
+    name: '&cMap Effect Visuals' # Novo nome
+    lore:
+      - '&7Controls whether powerful spells'
+      - '&7create visual effects like flying blocks.'
+      - '&8(Only for you)'
+      - ''
+      - '&7Current Status: {0}'
+      - ''
+      - '&eClick to toggle.'

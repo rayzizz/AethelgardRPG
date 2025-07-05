@@ -1,0 +1,231 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE PERSONAGEM (CHARACTER)
+# =====================================================
+# O nome do arquivo "character.yml" já atua como o prefixo "character.".
+# Portanto, as chaves aqui começam diretamente com o nome da chave, sem a chave "character:" no topo.
+
+# --- Mensagens Gerais de Feedback ---
+xp-max-level: "&eVocê já alcançou o nível máximo!"
+xp-gain: "&aVocê ganhou {0} XP!"
+
+level-up: "&bParabéns! Você subiu para o nível {0}!"
+attribute-points-gained: "&aVocê ganhou {0} pontos de atributo!"
+first_login_prompt: "&aBem-vindo, aventureiro! Escolha ou crie seu personagem."
+joined_game: "&aVocê entrou no mundo de Aethelgard!"
+chat:
+  module:
+    saving-data: "&eSalvando dados dos jogadores..."
+    disabled: "&cMódulo de Personagem desabilitado."
+    actionbar-disabled: "&eDisplay da Action Bar desabilitado na configuração."
+    actionbar-started: "&aDisplay da Action Bar iniciado."
+    actionbar-stopped: "&eDisplay da Action Bar parado."
+  regeneration:
+    health-disabled: "&eRegeneração base de vida desabilitada na configuração."
+    health-started: "&aRegeneração base de vida iniciada."
+    mana-disabled: "&eRegeneração base de mana desabilitada na configuração."
+    mana-started: "&aRegeneração base de mana iniciada."
+    stamina-disabled: "&eRegeneração de stamina desabilitada na configuração."
+    stamina-started: "&aRegeneração de stamina iniciada."
+  equipment:
+    itemmodule-not-found: "&c[Erro] Módulo de Itens não encontrado para atualizar atributos de equipamento para {0}."
+    attributes-updated: "&aSeus atributos foram atualizados com base no seu equipamento para {0}."
+  attributes:
+    reset-fail-invalid-data: "&c[Erro] Falha ao resetar atributos para {0}: dados inválidos."
+  creation:
+    success: "&aPersonagem &e{0}&a da classe &b{1}&a criado com sucesso!"
+    error: "&cOcorreu um erro ao criar seu personagem. Tente novamente."
+    error.already_exists: "&cVocê já possui um personagem com este nome e classe."
+    prompt_name: "&eDigite o nome do seu personagem no chat (ou 'cancelar'):"
+    cancelled: "&eCriação de personagem cancelada."
+    invalid_name: "&cNome inválido. Use de 3 a 16 caracteres alfanuméricos e '_'. Tente novamente."
+    timeout: "&cTempo esgotado para inserir o nome do personagem."
+  sprint:
+    no-stamina: "&cVocê não tem stamina suficiente para sprintar!"
+  delete_success: "&aPersonagem deletado com sucesso. Selecione outro."
+  welcome_back: "&aBem-vindo de volta, &e{0}&a!"
+  # --- CORREÇÃO APLICADA AQUI ---
+  deletion:
+    scheduled: "&eA exclusão do seu personagem &c{0}&e foi agendada. Ele será permanentemente removido em {1} minutos."
+    cancelled: "&aA exclusão do seu personagem &e{0}&a foi cancelada."
+    completed: "&cSeu personagem &e{0}&c foi excluído permanentemente."
+    immediate: "&cPersonagem &e{0}&c foi excluído permanentemente por um administrador."
+
+# --- Configurações de Efeitos de Level Up ---
+leveling:
+  title: "&6&lSUBIU DE NÍVEL!"
+  subtitle: "&eVocê alcançou o nível {0}!"
+  invalid-sound-config: "&c[Configuração Inválida] Som '{0}' para level up não encontrado. Usando padrão."
+  invalid-particle-config: "&c[Configuração Inválida] Partícula '{0}' para level up não encontrada."
+
+# --- Bússola de Perfil ---
+profile_compass:
+  name: "&bBússola do Perfil"
+  lore:
+    - "&7Clique com o botão direito"
+    - "&7para abrir seu perfil."
+  invalid-slot-config: "&c[Configuração Inválida] Slot da bússola '{0}' é inválido. Usando padrão (8)."
+
+# --- Slots de Acessório ---
+accessory_slot:
+  placeholder:
+    name: "&8Slot de Acessório Vazio"
+
+# --- GUIs ---
+gui:
+  profile:
+    title: "Perfil de {0}"
+    no-data: "&cNão foi possível carregar os dados do perfil para {0}."
+    attribute-increased: "&aSeu atributo de {0} foi aumentado!"
+    no-attribute-points: "&cVocê não tem pontos de atributo para gastar."
+    item:
+      player-info:
+        name: "&eInformações de {0}"
+        lore:
+          class: "&7Classe: &f{0}"
+          level: "&7Nível: &f{0}"
+          experience: "&7Experiência: &f{0} / {1}"
+          money: "&7Dinheiro: &f${0}"
+          attribute-points: "&7Pontos de Atributo: &a{0}"
+      attribute:
+        strength:
+          name: "&cForça"
+          name-raw: "Força"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        intelligence:
+          name: "&9Inteligência"
+          name-raw: "Inteligência"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        faith:
+          name: "&eFé"
+          name-raw: "Fé"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        dexterity:
+          name: "&aDestreza"
+          name-raw: "Destreza"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        agility:
+          name: "&bAgilidade"
+          name-raw: "Agilidade"
+          lore:
+            value: "&7Valor Atual: &f{0}"
+        lore: # Chave genérica para todos os atributos
+          click-to-increase: "&aClique para aumentar."
+      combat-info:
+        name: "&6Informações de Combate"
+        lore:
+          health: "&cVida: &f{0} / {1}"
+          mana: "&9Mana: &f{0} / {1}"
+          stamina: "&eStamina: &f{0} / {1}"
+          physical-defense: "&7Defesa Física: &f{0}"
+          magical-defense: "&7Defesa Mágica: &f{0}"
+      professions:
+        name: "&dProfissões"
+        lore:
+          header: "&7Níveis de Habilidade:"
+          entry: "&e{0}: &f{1} &7(&e{2} XP&7)"
+      crystal-skill:
+        name: "&bCristal de Reconfiguração"
+        lore:
+          description: "&7Gerencie seus pontos de atributo."
+          right-click-reset: "&eClique Direito para resetar."
+      skill-tree:
+        name: "&aÁrvore de Habilidades"
+        lore: "&7(Em breve)"
+      tome:
+        name: "&5Tomo de Conhecimento"
+        lore: "&7(Em breve)"
+      crates-cosmetics:
+        name: "&6Caixas e Cosméticos"
+        lore: "&7(Em breve)"
+      view-guild:
+        name: "&bVer Guilda"
+        lore: "&7(Em breve)"
+      recruit-friend:
+        name: "&aRecrutar Amigo"
+        lore: "&7(Em breve)"
+      daily-reward:
+        name: "&eRecompensa Diária"
+        lore: "&7(Em breve)"
+  slot_selection:
+    title: "&8Escolha seu Personagem"
+    new_char:
+      name: "&aNovo Personagem"
+      lore:
+        - "&7Clique para criar um novo"
+        - "&7personagem neste slot."
+    existing_char:
+      name: "&7({1}) &e{2}" # {0}=Nome do Personagem, {1}=Símbolo da Classe, {2}=Nome de Exibição da Classe
+      lore_class: "&7Classe: &e{0}" # Esta linha pode ser removida ou mantida para redundância, dependendo do design final.
+      lore_level: "&7Nível: &f{0}" # {0} = Nível
+      lore_play: "&aClique para jogar com este personagem."
+      lore_delete: "&cClique Direito para deletar."
+      lore_pending_deletion: "&cExclusão Pendente!"
+      lore_time_left: "&7Tempo restante: &a{0}m {1}s"
+      lore_manage_deletion: "&eClique para gerenciar a exclusão."
+    close_button:
+      name: "&cFechar"
+      lore:
+        - "&7Clique para sair da seleção."
+    kick_on_close: "&cVocê deve selecionar ou criar um personagem para jogar em AethelgardRPG!"
+  class_selection:
+    title: "&8Escolha sua Classe"
+    class_lore:
+      - "&7{0}" # {0} = Descrição da Classe
+      - ""
+      - "&7Vida Inicial: &c{1}" # {1} = Vida Inicial
+      - "&7Mana Inicial: &9{2}" # {2} = Mana Inicial
+      - ""
+      - "&aClique para selecionar esta classe."
+    back_button:
+      name: "&cVoltar"
+      lore:
+        - "&7Voltar para a seleção de slot."
+  attribute_reset_confirm:
+    title: "&4Confirmar Reset de Atributos"
+    info:
+      name: "&eInformação sobre o Reset"
+      lore1: "&7Resetando seus atributos irá devolver"
+      lore2: "&7todos os pontos gastos e redefinir"
+      lore3: "&7seus atributos base. Você terá &a{0} &7pontos."
+    confirm:
+      name: "&a&lCONFIRMAR"
+      lore: "&7Clique para resetar seus atributos."
+    cancel:
+      name: "&c&lCANCELAR"
+      lore: "&7Clique para voltar ao perfil."
+    success: "&aSeus atributos foram resetados!"
+    cancelled: "&cReset de atributos cancelado."
+  delete_gui:
+    title: "&4Confirmar Exclusão de Personagem"
+    pending:
+      name: "&eExclusão Pendente de {0}"
+      lore1: "&7Este personagem está agendado para exclusão."
+      lore2: "&7Tempo restante: &a{0}m {1}s"
+    cancel_pending:
+      name: "&a&lCANCELAR EXCLUSÃO"
+      lore:
+        - "&7Clique para cancelar a exclusão"
+        - "&7pendente deste personagem."
+    keep_pending:
+      name: "&c&lMANTER PENDENTE"
+      lore:
+        - "&7Clique para fechar esta GUI e"
+        - "&7manter a exclusão agendada."
+    confirm_new:
+      name: "&eInformações de Exclusão"
+      lore1: "&7Excluir seu personagem é permanente."
+      lore2: "&7Tem certeza que deseja prosseguir?"
+    confirm:
+      name: "&a&lCONFIRMAR"
+      lore:
+        - "&7Clique para excluir permanentemente"
+        - "&7este personagem."
+    cancel:
+      name: "&c&lCANCELAR"
+      lore:
+        - "&7Clique para retornar à seleção"
+        - "&7de personagem."

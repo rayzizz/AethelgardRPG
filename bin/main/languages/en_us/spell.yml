@@ -1,0 +1,119 @@
+# ==================================================
+#       SPELL MODULE MESSAGES (SPELL)
+# ==================================================
+
+# --- General Casting Messages ---
+cast:
+  success: "&aYou cast {0}!"
+  fail:
+    generic: "&cFailed to cast {0}."
+    player_data_missing: "&c[System Error] Could not find your character data."
+    spell_not_found: "&c[System Error] Spell with ID '{0}' was not found."
+    wrong_class: "&cYou must be a {0} to use this spell."
+    wrong_weapon: "&cYou are not holding the correct weapon for this spell."
+    cooldown: "&e{0} is on cooldown. Wait {1} more second(s)."
+    no_mana: "&cYou don't have enough mana for {0}. Cost: {1} mana."
+
+# --- Combo System ---
+combo:
+  cast_success: "&a{0} combo executed!"
+  cast_fail: "&c{0} combo failed!"
+  no_spell_assigned: "&cNo spell assigned to the {0} combo for your class."
+
+# --- Spell Learning and Assignment ---
+learn:
+  success: "&aYou have learned the spell: {0}!"
+  already_known: "&eYou already know the spell: {0}."
+  fail:
+    invalid_spell: "&c[System Error] Spell with ID '{0}' does not exist."
+
+assign:
+  success: "&aSpell {0} successfully assigned to combo {1}!"
+  fail:
+    no_class: "&cYou must have a class selected to assign spells."
+    invalid_spell: "&c[System Error] Spell with ID '{0}' does not exist."
+    not_known: "&cYou don't know the spell {0}. Learn it first!"
+    wrong_class: "&cThe spell {0} does not belong to your current class."
+
+unassign:
+  success: "&eSpell {0} unassigned from combo {1}."
+
+# --- General Module Errors ---
+error:
+  custom_mob_module_missing: "&c[System Error] The Custom Mobs module is not working."
+  player_data_missing: "&c[System Error] Could not find your character data."
+
+# --- Spellbook GUI Texts ---
+gui:
+  title: "Spellbook"
+  no_class: "&cYou need a class to open your spellbook."
+  assign:
+    prompt: "&e&lASSIGN SPELL: &r&eClick the desired combo slot."
+    prompt_unassign: "&c&lREMOVE SPELL: &r&cClick a combo to clear it."
+    cancel: "&cSpell assignment cancelled."
+    cancel_unassign: "&eSpell removal cancelled."
+  buttons:
+    view_all_spells:
+      name: "&aView Known Spells"
+      lore:
+        - "&7Click to see all the spells"
+        - "&7you have learned and can assign."
+    unassign_spell:
+      name: "&cUnassign a Spell"
+      lore:
+        - "&7Click to enter removal mode"
+        - "&7and clear a combo slot."
+    cancel_action:
+      name: "&cCancel Action"
+      lore:
+        - "&7Click to cancel assigning"
+        - "&7or removing a spell."
+  item:
+    mana_cost: "&eMana Cost: &b{0}"
+    cooldown: "&eCooldown: &b{0}s"
+    assign_lore: "&aClick to assign to a combo."
+    unassign_lore: "&cClick to unassign."
+    empty_combo:
+      name: "&eEmpty Combo Slot: &f{0}"
+      lore:
+        - "&7Assign a spell to this combo"
+        - "&7via the known spells book."
+  known_spells:
+    title: "Your Known Spells"
+    back_button: "&cBack to Spellbook"
+    previous_page: "&ePrevious Page"
+    next_page: "&eNext Page"
+
+# ==================================================
+#       SPECIFIC SPELL DEFINITIONS
+# ==================================================
+
+# --- Warrior Spells ---
+warrior:
+  spinning_fury:
+    name: "Spinning Fury"
+    description: "Executes a quick spin with your weapon, hitting all nearby enemies."
+    success: "&aYou hit {0} target(s) with Spinning Fury!"
+    no_targets_hit: "&eSpinning Fury didn't hit any targets."
+
+# --- Mage Spells ---
+mage:
+  freezing_ray:
+    name: "Freezing Ray"
+    description: "Fires a ray of ice that deals damage and slows the target."
+    no_target: "&cYour Freezing Ray found no target."
+    success: "&bYou froze {0} with your Freezing Ray!"
+
+# --- Necromancer Spells ---
+necromancer:
+  summon_skeleton:
+    name: "Summon Skeleton Minion"
+    description: "Summons a loyal skeleton to fight by your side."
+    success: "&aYou have summoned {0} loyal skeleton(s)!"
+    fail: "&cFailed to summon skeletons."
+    minion-ingame-name: "&8[&7{0}&8] &fSkeleton &a{1} &7({2}s)" # {0}=Owner, {1}=Health, {2}=Time
+
+# --- Minion Names ---
+minion:
+  skeleton:
+    base_name: "Allied Skeleton"

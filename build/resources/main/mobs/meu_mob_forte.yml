@@ -1,0 +1,32 @@
+# C:/Users/r/IdeaProjects/AethelgardRPG/src/main/resources/mobs/meu_mob_forte.yml
+id: "meu_mob_forte"
+display-name: "&cMeu Mob Forte"
+base-entity-type: ZOMBIE
+
+stats:
+  level: 15
+  max-health: 150.0
+  base-damage: 12.0
+  physical-defense: 20.0
+  magical-defense: 10.0
+  experience-drop: 75 # PADRONIZADO: de 'xp-on-kill' para 'experience-drop'
+
+visual:
+  custom-model-data: 5
+  scale: 1.1
+
+behavior:
+  ai-type: AGGRESSIVE_MELEE
+  aggro-range: 20.0
+  follow-range: 20.0 # Adicionado para consistência
+  attack-range: 2.0   # Adicionado para consistência
+  movement-speed: 0.35
+  out-of-combat-regen-profile: "fast_regen" # Perfil de regeneração
+
+abilities:
+  - "charge_strike"
+
+drops:
+  # Formato sugerido: "id_do_item quantidade chance"
+  - "minecraft:diamond 1 0.1"
+  - "minecraft:iron_ingot 1-3 1.0"

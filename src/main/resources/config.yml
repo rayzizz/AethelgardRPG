@@ -1,0 +1,28 @@
+# Configuração Principal do AethelgardRPG
+general:
+  default-language: "pt_br" # Idioma padrão para mensagens (ex: pt_br, en_us)
+
+# Habilite ou desabilite módulos inteiros do plugin aqui.
+# Desabilitar um módulo impede que seus comandos, listeners e tarefas sejam registrados.
+modules:
+  Admin: true
+  Character: true
+  ClassCombat: true
+  Item: true
+  Spell: true
+  Skill: true
+  CustomMob: true
+  Quest: true
+  Market: true
+  Bank: true
+  Dungeon: true
+  Area: true
+
+# Configurações específicas do Módulo de Magias (Spell)
+spell:
+  combo:
+    # Tempo máximo em milissegundos para completar um combo de 3 cliques.
+    max-window-millis: 1500
+    # Tempo máximo em milissegundos entre cliques individuais para que o combo não seja resetado.
+    # Geralmente, um valor um pouco maior que a metade do 'max-window-millis'.
+    max-time-between-clicks-millis: 800

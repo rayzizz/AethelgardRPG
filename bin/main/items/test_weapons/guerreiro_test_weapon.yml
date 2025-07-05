@@ -1,0 +1,17 @@
+id: test_weapons/guerreiro_test_weapon
+name-key: "item.custom_items.guerreiro_test_weapon.name"
+lore-key: "item.custom_items.guerreiro_test_weapon.lore"
+material: DIAMOND_SWORD
+rarity: RARO
+max-stack-size: 1
+is-rpg-item: true
+visual:
+  custom-model-data: 10
+requirements:
+  level: 1
+  class: GUERREIRO
+identified: true
+stats:
+  strength-bonus: 5
+  health-bonus: 10
+  physical-damage: 15 # Dano físico base da arma

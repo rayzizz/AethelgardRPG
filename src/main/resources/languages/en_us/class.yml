@@ -1,0 +1,25 @@
+# =====================================================
+#       CLASS NAMES AND DESCRIPTIONS (CLASS)
+# =====================================================
+# Keys in lowercase to match the code.
+# The filename "class.yml" already acts as the "class." prefix.
+# Therefore, keys here start directly with the class name, without the "class:" key at the top.
+
+guerreiro:
+  name: "&cWarrior"
+  description: "A robust melee combatant."
+mago:
+  name: "&9Mage"
+  description: "A ranged damage spellcaster."
+arqueiro:
+  name: "&aArcher"
+  description: "An expert in ranged combat with bows."
+necromante:
+  name: "&5Necromancer"
+  description: "Dark magic and minions."
+clerigo:
+  name: "&eCleric"
+  description: "Divine support and healing."
+assassino:
+  name: "&4Assassin"
+  description: "Fast damage and evasion."

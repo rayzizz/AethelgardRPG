@@ -1,0 +1,144 @@
+# ==================================================
+#       MENSAGENS DO MÓDULO DE MAGIAS (SPELL)
+# ==================================================
+
+# --- Mensagens Gerais de Conjuração ---
+cast:
+  success: "&aVocê conjurou {0}!"
+  fail:
+    generic: "&cFalha ao conjurar {0}."
+    player_data_missing: "&c[Erro do Sistema] Não foi possível encontrar os dados do seu personagem."
+    spell_not_found: "&c[Erro do Sistema] A magia com ID '{0}' não foi encontrada."
+    wrong_class: "&cVocê precisa ser da classe {0} para usar esta magia."
+    wrong_weapon: "&cVocê não está segurando a arma correta para esta magia."
+    cooldown: "&e{0} está em recarga. Espere mais {1} segundo(s)."
+    no_mana: "&cVocê não tem mana suficiente para {0}. Custo: {1} mana."
+
+# --- Sistema de Combos ---
+combo:
+  cast_success: "&aCombo de {0} executado!"
+  cast_fail: "&cFalha no combo de {0}!"
+  no_spell_assigned: "&cNenhuma magia atribuída ao combo {0} para sua classe."
+
+# --- Aprendizado e Atribuição de Magias ---
+learn:
+  success: "&aVocê aprendeu a magia: {0}!"
+  already_known: "&eVocê já conhece a magia: {0}."
+  fail:
+    invalid_spell: "&c[Erro do Sistema] Magia com ID '{0}' não existe."
+
+unlearn:
+  success: "&eVocê esqueceu a magia: {0}."
+  not_known: "&cVocê não conhecia a magia {0} para poder esquecê-la."
+  fail:
+    invalid_spell: "&c[Erro do Sistema] Magia com ID '{0}' não existe."
+
+admin_command:
+  usage: "&cUse: /aspell <learn|unlearn> <jogador> <id_da_magia>"
+  player_not_found: "&cJogador '{0}' não encontrado ou não está online."
+  spell_not_found: "&cMagia com ID '{0}' não existe."
+  learn_success_sender: "&a{1} aprendeu a magia '{0}'."
+  learn_fail_sender: "&cFalha ao ensinar a magia '{0}' para {1} (ele já a conhece?)."
+  unlearn_success_sender: "&e{1} esqueceu a magia '{0}'."
+  unlearn_fail_sender: "&cFalha ao remover a magia '{0}' de {1} (ele não a conhecia?)."
+
+assign:
+  success: "&aMagia {0} atribuída ao combo {1} com sucesso!"
+  fail:
+    no_class: "&cVocê precisa ter uma classe selecionada para atribuir magias."
+    invalid_spell: "&c[Erro do Sistema] Magia com ID '{0}' não existe."
+    not_known: "&cVocê não conhece a magia {0}. Aprenda-a primeiro!"
+    wrong_class: "&cA magia {0} não pertence à sua classe atual."
+
+unassign:
+  success: "&eMagia {0} desatribuída do combo {1}."
+
+# --- Erros Gerais do Módulo ---
+error:
+  custom_mob_module_missing: "&c[Erro do Sistema] O módulo de Mobs Customizados não está funcionando."
+  player_data_missing: "&c[Erro do Sistema] Não foi possível encontrar os dados do seu personagem."
+
+# --- Textos da GUI do Grimório ---
+gui:
+  title: "Grimório de Magias"
+  no_class: "&cVocê precisa de uma classe para abrir seu grimório."
+  assign:
+    prompt: "&e&lATRIBUIR MAGIA: &r&eClique no slot de combo desejado."
+    prompt_unassign: "&c&lREMOVER MAGIA: &r&cClique em um combo para limpá-lo."
+    cancel: "&cAtribuição de magia cancelada."
+    cancel_unassign: "&eRemoção de magia cancelada."
+    fail_unassign_empty: "&cVocê deve clicar em uma magia atribuída para desvinculá-la."
+    unassign_right_click_hint: "&eClique com o botão direito no botão 'Desatribuir uma Magia' para entrar no modo de remoção."
+  buttons:
+    view_all_spells:
+      name: "&aVer Magias Conhecidas"
+      lore:
+        - "&7Clique para ver todas as magias"
+        - "&7que você aprendeu e pode atribuir."
+    unassign_spell:
+      name: "&cDesatribuir uma Magia"
+      lore_right_click:
+        - "&7Clique com o botão direito para entrar no modo de remoção"
+        - "&7e limpar um slot de combo."
+    exit_gui:
+      name: "&cSair do Grimório"
+      lore:
+        - "&7Clique para fechar o grimório."
+  item:
+    mana_cost: "&eCusto de Mana: &b{0}"
+    cooldown: "&eRecarga: &b{0}s"
+    assign_lore: "&aClique para atribuir a um combo."
+    unassign_lore: "&cClique para desatribuir."
+    empty_combo:
+      name: "&eSlot de Combo Vazio: &f{0}"
+      lore:
+        - "&7Atribua uma magia a este combo"
+        - "&7através do livro de magias conhecidas."
+  known_spells:
+    title: "Suas Magias Conhecidas"
+    back_button: "&cVoltar ao Grimório"
+    previous_page: "&ePágina Anterior"
+    next_page: "&ePróxima Página"
+
+# ==================================================
+#       DEFINIÇÕES DE MAGIAS ESPECÍFICAS
+# ==================================================
+
+# --- Magias do Guerreiro ---
+warrior:
+  spinning_fury:
+    name: "Fúria Giratória"
+    description: "Executa um giro rápido com sua arma, atingindo todos os inimigos próximos."
+    success: "&aVocê atingiu {0} alvo(s) com Fúria Giratória!"
+    no_targets_hit: "&eFúria Giratória não atingiu nenhum alvo."
+  taunt:
+    name: "Provocação em Massa"
+    description: "Força todos os inimigos em um raio de {0} metros a te atacar por {1} segundos."
+    success: "&aVocê provocou &e{0} &ainimigos!"
+    no_targets: "&cVocê não provocou nenhum inimigo."
+  heroic_leap:
+    name: "Salto Heroico"
+    description: "Salte alto e cause {0} de dano em área com um raio de {1} ao aterrissar."
+    success: "Você realizou um Salto Heroico!"
+
+# --- Magias do Mago ---
+mage:
+  freezing_ray:
+    name: "Raio Congelante"
+    description: "Dispara um raio de gelo que causa dano e lentidão ao alvo."
+    no_target: "&cSeu Raio Congelante não encontrou um alvo."
+    success: "&bVocê congelou {0} com seu Raio Congelante!"
+
+# --- Magias do Necromante ---
+necromancer:
+  summon_skeleton:
+    name: "Invocar Lacaio Esqueleto"
+    description: "Evoca um esqueleto leal para lutar ao seu lado."
+    success: "&aVocê invocou {0} esqueleto(s) leal(is)!"
+    fail: "&cFalha ao invocar esqueletos."
+    minion-ingame-name: "&8[&7{0}&8] &fEsqueleto &a{1} &7({2}s)" # {0}=Dono, {1}=Vida, {2}=Tempo
+
+# --- Nomes de Lacaios (Minions) ---
+minion:
+  skeleton:
+    base_name: "Esqueleto Aliado"

@@ -1,0 +1,19 @@
+# plugins/AethelgardRPG/mobs/abilities/arrow_shot.yml
+id: "arrow_shot"
+display-name: "&fTiro de Flecha"
+type: "PROJECTILE_DAMAGE"
+cooldown-ticks: 40 # 2 segundos
+target-type: "ENEMY_PLAYER"
+range: 25.0 # Alcance máximo para usar a habilidade
+description:
+  - "&7Dispara uma flecha precisa no alvo."
+
+parameters:
+  projectile-type: "ARROW" # <-- Dispara uma flecha
+  projectile-speed: 2.0
+  projectile-life-ticks: 80 # 4 segundos de vida
+  damage-amount: 15.0
+  explosion-radius: 0.0 # Sem dano em área, é um tiro único
+  particle-trail: "CRIT" # Partícula de acerto crítico como rastro
+  sound-on-cast: "ENTITY_SKELETON_SHOOT" # Som de esqueleto atirando
+  sound-on-hit: "ENTITY_ARROW_HIT_PLAYER" # Som de flecha acertando

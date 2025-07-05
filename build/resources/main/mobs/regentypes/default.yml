@@ -1,0 +1,18 @@
+# Perfil padrão se nenhum for especificado para um mob
+# O ID do perfil será "default" (nome do arquivo)
+enabled: true
+is-percentage: false
+amount: 2.0 # Quantidade de vida regenerada
+interval-ticks: 40 # 2 segundos
+particle:
+  enabled: true
+  type: "HEART"
+  count: 1
+  offset-x: 0.2
+  offset-y: 0.3
+  offset-z: 0.2
+  speed: 0.01
+floating-text:
+  enabled: true
+  format: "+{amount} HP" # A cor será dinâmica
+  duration-ticks: 20

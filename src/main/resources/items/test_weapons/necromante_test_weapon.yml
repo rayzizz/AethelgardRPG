@@ -1,0 +1,17 @@
+id: test_weapons/necromante_test_weapon
+name-key: "item.custom_items.necromante_test_weapon.name" # Chave para buscar o nome no i_custom_items.yml
+lore-key: "item.custom_items.necromante_test_weapon.lore"   # Chave para buscar a lore (flavor text)
+material: BONE
+rarity: RARO
+max-stack-size: 1
+is-rpg-item: true
+visual:
+  custom-model-data: 1 # YAML interpretará 00001 como 1, o que é correto para custom-model-data
+requirements:
+  level: 1
+  class: NECROMANTE
+identified: true
+stats:
+  intelligence-bonus: 5
+  mana-bonus: 15
+  magical-damage: 15 # Dano mágico base da arma

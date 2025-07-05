@@ -1,0 +1,231 @@
+# =====================================================
+#       MESSAGES FOR CHARACTER MODULE (CHARACTER)
+# =====================================================
+# The filename "character.yml" already acts as the "character." prefix.
+# Therefore, keys here start directly with the key name, without the "character:" key at the top.
+
+# --- General Feedback Messages ---
+xp-max-level: "&eYou have reached the maximum level!"
+xp-gain: "&aYou gained {0} XP!"
+
+level-up: "&bCongratulations! You leveled up to {0}!"
+attribute-points-gained: "&aYou gained {0} attribute points!"
+first_login_prompt: "&aWelcome, adventurer! Choose or create your character."
+joined_game: "&aYou have entered the world of Aethelgard!"
+chat:
+  module:
+    saving-data: "&eSaving player data..."
+    disabled: "&cCharacter Module disabled."
+    actionbar-disabled: "&eAction Bar Display disabled in config."
+    actionbar-started: "&aAction Bar Display started."
+    actionbar-stopped: "&eAction Bar Display stopped."
+  regeneration:
+    health-disabled: "&eBase health regeneration disabled in config."
+    health-started: "&aBase health regeneration started."
+    mana-disabled: "&eBase mana regeneration disabled in config."
+    mana-started: "&aBase mana regeneration started."
+    stamina-disabled: "&eStamina regeneration disabled in config."
+    stamina-started: "&aStamina regeneration started."
+  equipment:
+    itemmodule-not-found: "&c[Error] Item Module not found to update equipment attributes for {0}."
+    attributes-updated: "&aYour attributes have been updated based on your equipment for {0}."
+  attributes:
+    reset-fail-invalid-data: "&c[Error] Failed to reset attributes for {0}: invalid data."
+  creation:
+    success: "&aCharacter &e{0}&a of class &b{1}&a created successfully!"
+    error: "&cAn error occurred while creating your character. Please try again."
+    error.already_exists: "&cYou already have a character with this name and class."
+    prompt_name: "&eEnter your character's name in chat (or 'cancel'):"
+    cancelled: "&eCharacter creation cancelled."
+    invalid_name: "&cInvalid name. Use 3 to 16 alphanumeric characters and '_'. Try again."
+    timeout: "&cTime ran out to enter character name."
+  sprint:
+    no-stamina: "&cYou don't have enough stamina to sprint!"
+  delete_success: "&aCharacter deleted successfully. Select another."
+  welcome_back: "&aWelcome back, &e{0}&a!"
+  # --- CORRECTION APPLIED HERE ---
+  deletion:
+    scheduled: "&eThe deletion of your character &c{0}&e has been scheduled. It will be permanently removed in {1} minutes."
+    cancelled: "&aThe deletion of your character &e{0}&a has been cancelled."
+    completed: "&cYour character &e{0}&c has been permanently deleted."
+    immediate: "&cCharacter &e{0}&c was permanently deleted by an administrator."
+
+# --- Level Up Effect Settings ---
+leveling:
+  title: "&6&lLEVEL UP!"
+  subtitle: "&eYou reached level {0}!"
+  invalid-sound-config: "&c[Invalid Config] Sound '{0}' for level up not found. Using default."
+  invalid-particle-config: "&c[Invalid Config] Particle '{0}' for level up not found."
+
+# --- Profile Compass ---
+profile_compass:
+  name: "&bProfile Compass"
+  lore:
+    - "&7Right-click to open"
+    - "&7your profile."
+  invalid-slot-config: "&c[Invalid Config] Compass slot '{0}' is invalid. Using default (8)."
+
+# --- Accessory Slots ---
+accessory_slot:
+  placeholder:
+    name: "&8Empty Accessory Slot"
+
+# --- GUIs ---
+gui:
+  profile:
+    title: "Profile of {0}"
+    no-data: "&cCould not load profile data for {0}."
+    attribute-increased: "&aYour {0} attribute has been increased!"
+    no-attribute-points: "&cYou have no attribute points to spend."
+    item:
+      player-info:
+        name: "&eInformation of {0}"
+        lore:
+          class: "&7Class: &f{0}"
+          level: "&7Level: &f{0}"
+          experience: "&7Experience: &f{0} / {1}"
+          money: "&7Money: &f${0}"
+          attribute-points: "&7Attribute Points: &a{0}"
+      attribute:
+        strength:
+          name: "&cStrength"
+          name-raw: "Strength"
+          lore:
+            value: "&7Current Value: &f{0}"
+        intelligence:
+          name: "&9Intelligence"
+          name-raw: "Intelligence"
+          lore:
+            value: "&7Current Value: &f{0}"
+        faith:
+          name: "&eFaith"
+          name-raw: "Faith"
+          lore:
+            value: "&7Current Value: &f{0}"
+        dexterity:
+          name: "&aDexterity"
+          name-raw: "Dexterity"
+          lore:
+            value: "&7Current Value: &f{0}"
+        agility:
+          name: "&bAgility"
+          name-raw: "Agility"
+          lore:
+            value: "&7Current Value: &f{0}"
+        lore: # Generic key for all attributes
+          click-to-increase: "&aClick to increase."
+      combat-info:
+        name: "&6Combat Information"
+        lore:
+          health: "&cHealth: &f{0} / {1}"
+          mana: "&9Mana: &f{0} / {1}"
+          stamina: "&eStamina: &f{0} / {1}"
+          physical-defense: "&7Physical Defense: &f{0}"
+          magical-defense: "&7Magical Defense: &f{0}"
+      professions:
+        name: "&dProfessions"
+        lore:
+          header: "&7Skill Levels:"
+          entry: "&e{0}: &f{1} &7(&e{2} XP&7)"
+      crystal-skill:
+        name: "&bRespec Crystal"
+        lore:
+          description: "&7Manage your attribute points."
+          right-click-reset: "&eRight-Click to reset."
+      skill-tree:
+        name: "&aSkill Tree"
+        lore: "&7(Coming soon)"
+      tome:
+        name: "&5Tome of Knowledge"
+        lore: "&7(Coming soon)"
+      crates-cosmetics:
+        name: "&6Crates & Cosmetics"
+        lore: "&7(Coming soon)"
+      view-guild:
+        name: "&bView Guild"
+        lore: "&7(Coming soon)"
+      recruit-friend:
+        name: "&aRecruit Friend"
+        lore: "&7(Coming soon)"
+      daily-reward:
+        name: "&eDaily Reward"
+        lore: "&7(Coming soon)"
+  slot_selection:
+    title: "&8Choose Your Character"
+    new_char:
+      name: "&aNew Character"
+      lore:
+        - "&7Click to create a new"
+        - "&7character in this slot."
+    existing_char:
+      name: "&7({1}) &e{2}" # {0}=Character Name, {1}=Class Symbol, {2}=Class Display Name
+      lore_class: "&7Class: &e{0}"
+      lore_level: "&7Level: &f{0}"
+      lore_play: "&aClick to play with this character."
+      lore_delete: "&cRight-Click to delete."
+      lore_pending_deletion: "&cPending Deletion!"
+      lore_time_left: "&7Time remaining: &a{0}m {1}s"
+      lore_manage_deletion: "&eClick to manage deletion."
+    close_button:
+      name: "&cClose"
+      lore:
+        - "&7Click to exit selection."
+    kick_on_close: "&cYou must select or create a character to play in AethelgardRPG!"
+  class_selection:
+    title: "&8Choose Your Class"
+    class_lore:
+      - "&7{0}" # {0} = Class Description
+      - ""
+      - "&7Starting Health: &c{1}" # {1} = Starting Health
+      - "&7Starting Mana: &9{2}" # {2} = Starting Mana
+      - ""
+      - "&aClick to select this class."
+    back_button:
+      name: "&cBack"
+      lore:
+        - "&7Back to slot selection."
+  attribute_reset_confirm:
+    title: "&4Confirm Attribute Reset"
+    info:
+      name: "&eReset Information"
+      lore1: "&7Resetting your attributes will refund"
+      lore2: "&7all spent points and reset your"
+      lore3: "&7base attributes. You will have &a{0} &7points."
+    confirm:
+      name: "&a&lCONFIRM"
+      lore: "&7Click to reset your attributes."
+    cancel:
+      name: "&c&lCANCEL"
+      lore: "&7Click to return to profile."
+    success: "&aYour attributes have been reset!"
+    cancelled: "&cAttribute reset cancelled."
+  delete_gui:
+    title: "&4Confirm Character Deletion"
+    pending:
+      name: "&ePending Deletion of {0}"
+      lore1: "&7This character is scheduled for deletion."
+      lore2: "&7Time remaining: &a{0}m {1}s"
+    cancel_pending:
+      name: "&a&lCANCEL DELETION"
+      lore:
+        - "&7Click to cancel the pending"
+        - "&7deletion of this character."
+    keep_pending:
+      name: "&c&lKEEP PENDING"
+      lore:
+        - "&7Click to close this GUI and"
+        - "&7keep the deletion scheduled."
+    confirm_new:
+      name: "&eDeletion Information"
+      lore1: "&7Deleting your character is permanent."
+      lore2: "&7Are you sure you want to proceed?"
+    confirm:
+      name: "&a&lCONFIRM"
+      lore:
+        - "&7Click to permanently delete"
+        - "&7this character."
+    cancel:
+      name: "&c&lCANCEL"
+      lore:
+        - "&7Click to return to character"
+        - "&7selection."

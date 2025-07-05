@@ -1,0 +1,25 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE ÁREAS (AREA)
+# =====================================================
+
+# --- Mensagens de Entrada/Saída de Regiões ---
+# Esta chave é usada como um invólucro para mensagens de entrada e saída definidas
+# diretamente nos arquivos de configuração de cada região (ex: safezone.yml).
+# O {0} será substituído pela mensagem configurada na região.
+# Exemplo de uso no código: player.sendMessage(plugin.getMessage("area.custom-message", region.getEntryMessage()));
+custom-message: "{0}"
+
+# --- Mensagens de Comando de Administração (/areaadmin) ---
+admin:
+  usage: "&cUso: /areaadmin <define|delete|list> ..."
+  define-placeholder: "&eComando de definição de área (placeholder)."
+  delete-placeholder: "&eComando de exclusão de área (placeholder)."
+  list-placeholder: "&eComando de listagem de área (placeholder)."
+
+# --- Mensagens Futuras (TODOs) ---
+# Se você adicionar mais funcionalidades ao módulo de Área que precisem de mensagens,
+# adicione as chaves aqui.
+# Ex:
+#  pvp-toggle-on: "&aPvP habilitado nesta área."
+#  pvp-toggle-off: "&cPvP desabilitado nesta área."
+#  mob-spawn-prevented: "&cSpawns de mobs vanilla foram prevenidos nesta área."

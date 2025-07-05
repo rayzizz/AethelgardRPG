@@ -1,0 +1,156 @@
+# =====================================================
+#       ADMINISTRATION MODULE MESSAGES (ADMIN)
+# =====================================================
+
+# --- Chat Messages ---
+chat:
+  # Moderation Commands
+  ban:
+    usage: "&cUsage: /ban <player> [reason]"
+    default-reason: "Reason not specified."
+    success: "&aPlayer {0} has been banned. Reason: {1}"
+    kick-message: "&cYou have been banned from the server. Reason: {0}"
+  kick:
+    usage: "&cUsage: /kick <player> [reason]"
+    default-reason: "Reason not specified."
+    success: "&aPlayer {0} has been kicked. Reason: {1}"
+    kick-message: "&cYou have been kicked from the server. Reason: {0}"
+  mute:
+    usage: "&cUsage: /mute <player> [time] [reason]"
+    success: "&aPlayer {0} has been muted (placeholder)."
+    muted-message: "&cYou have been muted (placeholder)."
+  vanish:
+    enabled: "&aYou are now invisible."
+    disabled: "&aYou are no longer invisible."
+  gamemode:
+    usage: "&cUsage: /gamemode <mode> [player]"
+    invalid-mode: "&cInvalid game mode: {0}. Use survival, creative, adventure, spectator or 0, 1, 2, 3."
+    player-only-or-specify: "&cYou must be a player to use this command on yourself, or specify a player."
+    success: "&a{0}'s game mode changed to {1}."
+    changed-by-other: "&aYour game mode has been changed to {0}."
+
+  # Item Acquisition Commands
+  getaccessory:
+    usage: "&cUsage: /getaccessory <accessory_id>"
+    itemmodule-not-found: "&cItem Module not found. Command unavailable."
+    item-not-found: "&cAccessory with ID '{0}' not found."
+    not-an-accessory: "&cItem '{0}' is not a valid accessory."
+    success: "&aYou received the accessory: {0}"
+  getarmor:
+    usage: "&cUsage: /getarmor <armor_id>"
+    itemmodule-not-found: "&cItem Module not found. Command unavailable."
+    item-not-found: "&cArmor with ID '{0}' not found."
+    not-an-armor: "&cItem '{0}' is not a valid armor."
+    success: "&aYou received the armor: {0}"
+  gettestweapon:
+    usage: "&cUsage: /gettestweapon <class>"
+    invalid-class: "&cInvalid class: {0}."
+    itemmodule-not-found: "&cItem Module not found. Command unavailable."
+    weapon-creation-failed: "&cFailed to create test weapon for class {0}."
+    check-config: "&eCheck if 'items/test_weapons/{0}.yml' exists and is correct."
+    success: "&aYou received the test weapon for {0}."
+
+  # Player/Mob Management Commands
+  setclass:
+    usage: "&cUsage: /setclass <player> <class>"
+    class-not-found: "&cClass '{0}' not found."
+    player-no-data: "&cPlayer {0} does not have character data loaded."
+    success: "&a{0}'s class has been set to {1}."
+    changed-by-other: "&aAn administrator has changed your class to {0}."
+  spawntestmob:
+    usage: "&cUsage: /spawntestmob <mob_id>"
+    not-found: "&cCustom mob with ID '{0}' not found."
+    success: "&aSuccessfully summoned custom mob: {0}."
+    spawn-failed: "&cFailed to summon custom mob: {0}."
+    module-not-found: "&cCustomMob module not found or disabled."
+
+  # NEW: Infinite Stats Command
+  infinitestats:
+    usage: "&cUsage: /infinitestats [player]"
+    enabled: "&aInfinite stats enabled for {0}."
+    disabled: "&cInfinite stats disabled for {0}."
+    changed-by-other: "&aYour infinite stats have been {0} by an administrator."
+
+  # /rpgadmin Command (chat version)
+  rpgadmin_command:
+    usage: "&cUsage: /rpgadmin <performance|economy|inspect [player]>"
+    economy-placeholder: "&eEconomy statistics (placeholder)."
+    inspect-usage: "&cUsage: /rpgadmin inspect <player>"
+    inspect-console-placeholder: "&eInspecting {0} (console - placeholder)."
+    performance-header: "&6--- Performance Timings ---"
+    performance-no-data: "&eNo performance data collected yet."
+    performance-entry: "&7- &f{0}: &e{1} ms"
+
+# --- GUI Messages ---
+# Keys here are nested to match how they are called in code
+# (e.g., plugin.getMessage(player, "admin.gui_main.title"))
+gui_main:
+  title: "RPG Admin Panel"
+  item:
+    performance:
+      name: "&6Performance Monitor"
+      lore1: "&7Click to view timings"
+      lore2: "&7of various plugin operations."
+    inspect:
+      name: "&bInspect Player"
+      lore1: "&7Click to inspect"
+      lore2: "&7an online player's data."
+    economy:
+      name: "&eManage Economy"
+      lore1: "&7(Coming Soon)"
+      lore2: "&7Manage server economy aspects."
+    reload:
+      name: "&aReload Configurations"
+      lore1: "&7Click to reload all"
+      lore2: "&7plugin configurations."
+  action:
+    inspect-prompt-json-click: "&a[Click here or type /rpgadmin inspect <name>]"
+    inspect-prompt-json-hover: "&eClick to suggest the command in chat."
+    inspect-prompt-chat-instruction: "&eOr type the player's name in chat to inspect (or 'cancel')."
+    inspect-cancelled: "&eInspection cancelled."
+    inspect-timeout: "&cTime to enter player name expired."
+
+gui_inspect:
+  title: "Inspect Player: {0}"
+  no-data: "&cCould not load data for player {0}."
+  item_compass:
+    name: "&6{0}'s Information"
+    lore_player: "&7Player: &f{0}"
+    lore_class: "&7Class: &e{0}"
+    lore_level_xp: "&7Level: &e{0} &7(XP: &e{1}/{2}&7)"
+    lore_money: "&7Money: &6{0}"
+    lore_attr_points: "&7Attribute Points: &b{0}"
+  # New keys for hardcoded items
+  item:
+    primary_attributes:
+      name: "&cPrimary Attributes"
+      lore:
+        strength: "&7Strength: &f{0}"
+        intelligence: "&7Intelligence: &f{0}"
+        faith: "&7Faith: &f{0}"
+        dexterity: "&7Dexterity: &f{0}"
+        agility: "&7Agility: &f{0}"
+    secondary_attributes:
+      name: "&aSecondary Attributes"
+      lore:
+        health: "&7Health: &f{0} / {1}"
+        mana: "&7Mana: &f{0} / {1}"
+    skills:
+      name: "&bSkills"
+      lore:
+        header: "&7Skill Levels:"
+        entry: "&e{0}: &f{1} &7(&e{2} XP&7)"
+
+gui_performance:
+  title: "Performance Monitor"
+  no_data:
+    name: "&cNo Data"
+    lore: "&7No performance timings have been recorded yet."
+  item:
+    name_prefix: "&eTiming: &f"
+    lore_time: "&7Duration: &f{0} ms"
+    description_default: "&7Execution time for: &f{0}"
+    description_module_enable: "&7Time to enable module: &f{0}"
+    description_module_disable: "&7Time to disable module: &f{0}"
+    description_player_load: "&7Time to load data for: &f{0}"
+    description_player_save: "&7Time to save data for: &f{0}"

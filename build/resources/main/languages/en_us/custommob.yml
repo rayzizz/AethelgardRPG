@@ -1,0 +1,27 @@
+# =====================================================
+#       CUSTOM MOB MODULE MESSAGES
+# =====================================================
+
+# Chat messages
+chat:
+  minion-invulnerable-day: "&cYour skeleton minion is invulnerable during the day!"
+
+# Floating texts (damage indicators, XP)
+floating-text:
+  xp-gain: "&f&l+{0} XP" # {0} = quantidade de XP
+  damage-indicator: "&c&l{0}" # {0} = quantidade de dano
+
+# Mob display formats in the world
+display:
+  # Mob name format in the world.
+  # {0} = Base mob name (translated via displayNameKey or fallback)
+  # {1} = Mob level
+  mob-name-format: "{0} [Nv. {1}]"
+
+# --- Specific Mob Names ---
+mobs:
+  meu_mob_forte:
+    name: "&cMy Strong Mob"
+  # NEW: Added translation for the test goblin
+  test_goblin:
+    name: "&aTest Goblin"

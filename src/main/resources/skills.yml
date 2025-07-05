@@ -1,0 +1,50 @@
+# C:/.../AethelgardRPG/run/plugins/AethelgardRPG/skills.yml
+
+# Configurações padrão para a fórmula de XP por nível
+defaults:
+  max-level: 100
+  formula:
+    level-linear-factor: 100.0
+    power-base: 1.2
+    power-multiplier: 1.05
+
+skills:
+  MINERACAO:
+    max-level: 100
+    # ... outras configs específicas de mineração
+    xp-sources:
+      # Bloco: XP
+      COAL_ORE: 5.0
+      DEEPSLATE_COAL_ORE: 5.5
+      COPPER_ORE: 7.0
+      DEEPSLATE_COPPER_ORE: 7.5
+      IRON_ORE: 10.0
+      DEEPSLATE_IRON_ORE: 11.0
+      GOLD_ORE: 15.0
+      DEEPSLATE_GOLD_ORE: 16.5
+      LAPIS_ORE: 20.0
+      DEEPSLATE_LAPIS_ORE: 22.0
+      REDSTONE_ORE: 25.0
+      DEEPSLATE_REDSTONE_ORE: 27.5
+      DIAMOND_ORE: 50.0
+      DEEPSLATE_DIAMOND_ORE: 55.0
+      EMERALD_ORE: 75.0
+      DEEPSLATE_EMERALD_ORE: 82.5
+      ANCIENT_DEBRIS: 200.0
+  PESCA:
+    max-level: 100
+    # ... outras configs específicas de pesca
+    xp-sources:
+      # Item Pescado: XP
+      COD: 15.0
+      SALMON: 20.0
+      TROPICAL_FISH: 35.0
+      PUFFERFISH: 30.0
+      # Tesouros
+      ENCHANTED_BOOK: 100.0
+      BOW: 50.0
+      FISHING_ROD: 50.0
+      NAME_TAG: 75.0
+      NAUTILUS_SHELL: 80.0
+      SADDLE: 75.0
+  # ... outras skills

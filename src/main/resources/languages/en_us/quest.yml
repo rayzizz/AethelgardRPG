@@ -1,0 +1,57 @@
+# =====================================================
+#       QUEST MODULE MESSAGES (QUEST)
+# =====================================================
+
+# --- General Feedback ---
+not-found: "&cQuest with ID '{0}' not found."
+offer: "&e[Quest] {0}: &7{1}"
+accept-prompt: "&aType /quest accept {0} to start this quest."
+accepted: "&aQuest Accepted: {0}!"
+completed: "&6Quest Completed: {0}!"
+
+# --- Failure Messages ---
+cannot-start: "&cYou do not meet the requirements to start the quest: {0}."
+cannot-start-level: "&cYou need to be level {0} to start this quest."
+cannot-start-quest: "&cYou need to complete quest '{0}' first."
+objectives-not-complete: "&cYou have not completed all objectives for the quest: {0}."
+
+# --- Rewards ---
+reward:
+  xp: "&a+ {0} XP"
+  money: "&6+ ${0}"
+  item: "&a+ {0} x{1}" # Ex: + Iron Sword x1
+
+# --- Quest Log ---
+log:
+  title-separator: "&7&m----------------------------------"
+  quest-title: "  &6{0}"
+  quest-description: "    &7&o{0}"
+  objectives-header: "  &eObjectives:"
+  rewards-header: "  &eRewards:"
+  no-active-quests: "&7You have no active quests."
+
+# --- Objective Format and Descriptions ---
+objective:
+  # Format for displaying objective progress.
+  # {0} = Objective text (e.g., "Kill 5 Goblins")
+  # {1} = Progress (e.g., "3/5")
+  format:
+    incomplete: "&7- {0} &c({1})"
+    complete: "&a- &m{0}&a (Completed)"
+
+  # Generic description keys for each objective type.
+  # {0} = Target name (translated via Mob/Item system)
+  # {1} = Required amount
+  description:
+    kill_mobs: "Defeat {1} {0}"
+    collect_items: "Collect {1} {0}"
+    reach_location: "Go to {0}"
+    talk_to_npc: "Talk to {0}"
+
+# =====================================================
+#       SPECIFIC QUEST DEFINITIONS
+# =====================================================
+quests:
+  exemplo_cacador_goblins:
+    title: "Goblin Hunter"
+    description: "The city guard needs help dealing with a goblin infestation near the forest."

@@ -1,0 +1,42 @@
+# =====================================================
+#       SKILL MODULE CONFIGURATIONS (SKILL)
+# =====================================================
+
+# Default configurations that will be applied to all skills,
+# unless overridden in the 'skills' section below.
+defaults:
+  max-level: 100
+  # XP Formula: (level * linear-factor) + (power-base ^ (level * power-multiplier))
+  formula:
+    level-linear-factor: 100.0
+    power-base: 1.2
+    power-multiplier: 1.05
+
+# Specific configurations for each skill.
+# The name must exactly match the name in the SkillType enum.
+skills:
+  MINERACAO:
+    max-level: 100
+    formula:
+      level-linear-factor: 120.0
+      power-base: 1.25
+      power-multiplier: 1.08
+  PESCA:
+    max-level: 50
+    # If the 'formula' section is not specified, it will use the 'defaults' formula.
+  ALQUIMIA:
+    max-level: 75
+    formula:
+      level-linear-factor: 150.0
+      power-base: 1.3
+      power-multiplier: 1.1
+  CULINARIA:
+    max-level: 50
+  HERBALISMO:
+    max-level: 75
+  FORJA:
+    max-level: 100
+    formula:
+      level-linear-factor: 200.0
+      power-base: 1.4
+      power-multiplier: 1.12

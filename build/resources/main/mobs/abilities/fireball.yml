@@ -1,0 +1,19 @@
+# plugins/AethelgardRPG/mobs/abilities/fireball.yml
+id: "fireball"
+display-name: "&cBola de Fogo"
+type: "PROJECTILE_DAMAGE" # Tipo da habilidade, para lógica customizada
+cooldown-ticks: 100 # 5 segundos
+target-type: "ENEMY_PLAYER" # Alvo são jogadores inimigos
+range: 20.0 # Alcance máximo em blocos
+description:
+  - "&7Dispara uma bola de fogo que"
+  - "&7causa dano em área ao atingir."
+parameters:
+  projectile-type: "FIREBALL" # Tipo de entidade do projétil (SMALL_FIREBALL, FIREBALL, WITHER_SKULL, ARROW, SPECTRAL_ARROW)
+  projectile-speed: 1.5
+  projectile-life-ticks: 100 # Tempo de vida do projétil em ticks (5 segundos)
+  damage-amount: 25.0
+  explosion-radius: 2.0 # Raio da explosão ao atingir
+  particle-trail: "FLAME" # Partícula do rastro
+  sound-on-cast: "ENTITY_BLAZE_SHOOT"
+  sound-on-hit: "ENTITY_GENERIC_EXPLODE"

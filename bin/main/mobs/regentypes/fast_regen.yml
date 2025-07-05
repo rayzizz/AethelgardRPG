@@ -1,0 +1,17 @@
+# ID do perfil: "fast_regen"
+enabled: true
+is-percentage: false # Regenera uma quantidade fixa
+amount: 10.0         # Regenera 10 HP por intervalo
+interval-ticks: 20   # A cada 1 segundo (20 ticks)
+particle:
+  enabled: true
+  type: "HEART"      # Partícula de coração
+  count: 2
+  offset-x: 0.3
+  offset-y: 0.4
+  offset-z: 0.3
+  speed: 0.05
+floating-text:
+  enabled: true
+  format: "&c&l+{amount} HP" # Texto vermelho e negrito (a cor dinâmica ainda pode ser aplicada sobre esta base)
+  duration-ticks: 15

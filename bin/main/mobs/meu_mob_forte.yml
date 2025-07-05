@@ -1,0 +1,23 @@
+id: "meu_mob_forte"
+# CORREÇÃO: A chave agora aponta para o arquivo 'custommob.yml'
+display-name-key: "custommob.mobs.meu_mob_forte.name"
+display-name: "&cMeu Mob Forte &7[Nv. 15]" # Fallback caso a chave não seja encontrada
+base-entity-type: ZOMBIE
+stats:
+  max-health: 150.0
+  base-damage: 12.0
+  physical-defense: 20.0
+  magical-defense: 10.0
+  xp-on-kill: 75.0
+visual:
+  custom-model-data: 5
+behavior:
+  ai-type: AGGRESSIVE_MELEE
+  has-gravity: true
+  aggro-range: 20.0
+  out-of-combat-regen-profile: "fast_regen"
+abilities:
+  - "charge_strike"
+drops:
+  - "DIAMOND:1"
+  - "IRON_INGOT:1-3"

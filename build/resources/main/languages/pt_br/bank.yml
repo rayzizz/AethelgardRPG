@@ -1,0 +1,32 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE BANCO (BANK)
+# =====================================================
+
+# --- Mensagens Gerais e de GUI ---
+error-accessing-account: "&cOcorreu um erro ao acessar sua conta bancária."
+gui-title: "Banco de {0}" # {0} = Nome do jogador
+gui-opened: "&aAbrindo seu banco..."
+current-balance: "&eSaldo Atual: &6${0}"
+
+# --- Comandos de Depósito/Saque ---
+deposit:
+  usage: "&cUso: /bank deposit <quantia|all>"
+  success: "&aVocê depositou ${0} em sua conta."
+  not-enough-money: "&cVocê não tem ${0} para depositar."
+  invalid-amount: "&c'{0}' não é uma quantia válida."
+withdraw:
+  usage: "&cUso: /bank withdraw <quantia|all>"
+  success: "&aVocê sacou ${0} da sua conta."
+  not-enough-balance: "&cVocê não tem saldo suficiente para sacar ${0}."
+  invalid-amount: "&c'{0}' não é uma quantia válida."
+
+# --- Comandos de Upgrade (Futuro) ---
+upgrade:
+  usage: "&cUso: /bank upgrade slots"
+  success: "&aSeu banco foi expandido para {0} slots!"
+  not-enough-money: "&cVocê precisa de ${0} para expandir seu banco."
+  max-slots-reached: "&cSeu banco já atingiu o tamanho máximo."
+
+# --- Placeholders (para comandos não implementados) ---
+deposit-placeholder: "&eComando de depósito (placeholder)."
+withdraw-placeholder: "&eComando de saque (placeholder)."

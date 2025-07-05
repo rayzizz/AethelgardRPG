@@ -1,0 +1,82 @@
+# Este é um arquivo de exemplo/tutorial para demonstrar como criar ARMADURAS customizadas.
+# Cada campo é explicado para facilitar a criação de novas armaduras.
+
+# ID ÚNICO DA ARMADURA:
+# Usado internamente para referenciar a armadura (comandos, drops, etc.).
+# Convenção: "armor/conjunto/nome_da_peca" ou "armor/nome_da_peca".
+id: "tutorial/example_armor_chestplate"
+
+# MATERIAL BASE DO MINECRAFT:
+# Define o tipo de peça de armadura base do Minecraft.
+# Ex: DIAMOND_HELMET, IRON_CHESTPLATE, LEATHER_LEGGINGS, GOLDEN_BOOTS.
+material: "IRON_CHESTPLATE"
+
+# NOME DE EXIBIÇÃO:
+# O nome que aparecerá para o jogador. Suporta códigos de cor com '&'.
+display-name: "&bPeitoral de Ferro Exemplar"
+
+# RARIDADE:
+# Define a cor do nome e a raridade geral da armadura.
+# Valores possíveis: COMUM, INCOMUM, RARO, EPICO, LENDARIO, MITICO.
+rarity: "RARO"
+
+# COR (APENAS PARA ARMADURAS DE COURO):
+# Define a cor da armadura se o 'material' for de couro (LEATHER_...).
+# Formatos: "R,G,B" (ex: "255,0,0" para vermelho) ou Hexadecimal (ex: "#FF0000").
+# color: "50,100,200" # Exemplo: um azul escuro para couro
+
+# ACABAMENTO DE ARMADURA (ARMOR TRIM):
+# Permite adicionar acabamentos visuais às armaduras (Minecraft 1.20+).
+# Materiais de trim: QUARTZ, IRON, NETHERITE, REDSTONE, COPPER, GOLD, EMERALD, DIAMOND, LAPIS, AMETHYST.
+# Padrões de trim: SENTRY, DUNE, COAST, WILD, WARD, EYE, VEX, TIDE, SNOUT, RIB, SPIRE, WAYFINDER, SHAPER, SILENCE, RAISER, HOST.
+armor-trim:
+  material: "GOLD"    # Material do acabamento
+  pattern: "SENTRY"   # Padrão do acabamento
+
+# VISUAL:
+# Configurações visuais adicionais.
+visual:
+  # CUSTOM MODEL DATA:
+  # Usado com Resource Packs para dar modelos customizados à armadura.
+  # Deve ser um número inteiro.
+  custom-model-data: 2001
+
+# REQUISITOS:
+# Condições para o jogador poder equipar a armadura.
+requirements:
+  level: 10          # Nível mínimo do jogador.
+  # strength: 15    # Exemplo: Requisito de Força.
+  # class: "GUERREIRO" # Classe específica.
+
+# ATRIBUTOS (STATS):
+# Bônus que a armadura concede quando equipada.
+stats:
+  health-bonus: 50             # Bônus de Vida Máxima.
+  # mana-bonus: 0              # Bônus de Mana Máxima (geralmente não em armaduras pesadas).
+  # strength-bonus: 0          # Bônus de Força.
+
+  physical-defense-bonus: 25    # Bônus de Defesa Física (principal para armaduras).
+  magical-defense-bonus: 10     # Bônus de Defesa Mágica.
+
+# LORE (DESCRIÇÃO):
+# Linhas de texto que aparecem abaixo dos atributos. Suporta códigos de cor com '&'.
+lore:
+  - "&7Um peitoral robusto, forjado para resistir."
+  - ""
+  - "&bDetalhes da Armadura:"
+  - "&f- Proteção exemplar contra ataques físicos."
+  - "&f- Acabamento dourado no estilo Sentinela."
+  - ""
+  - "&bCampos Relevantes para Armaduras:"
+  - "&f- &aMaterial&f: Tipo de armadura (ex: IRON_CHESTPLATE)."
+  - "&f- &aColor&f: Para armaduras de couro."
+  - "&f- &aArmor-Trim&f: Para personalização visual (1.20+)."
+  - "&f- &aStats&f: Principalmente 'physical-defense-bonus' e 'magical-defense-bonus'."
+
+# IDENTIFICADO:
+# Se 'false', a armadura pode precisar ser identificada para revelar seus stats completos.
+identified: true
+
+# É UM ACESSÓRIO?:
+# Para armaduras, este valor deve ser 'false'.
+is-accessory: false

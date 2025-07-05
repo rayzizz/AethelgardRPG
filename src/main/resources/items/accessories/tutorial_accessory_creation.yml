@@ -1,0 +1,82 @@
+# Este é um arquivo de exemplo/tutorial para demonstrar como criar ACESSÓRIOS customizados.
+# Cada campo é explicado para facilitar a criação de novos acessórios.
+
+# ID ÚNICO DO ACESSÓRIO:
+# Usado internamente para referenciar o acessório (comandos, drops, etc.).
+# Convenção: "accessory/tipo/nome_do_acessorio" ou "accessory/nome_do_acessorio".
+id: "tutorial/example_ring_of_vitality"
+
+# MATERIAL BASE DO MINECRAFT:
+# Define o tipo de item base do Minecraft para o acessório.
+# Pode ser qualquer item, mas itens pequenos como NUGGETS, SHARDS, DYES são comuns.
+material: "GOLD_NUGGET" # Um anel pode ser representado por uma pepita.
+
+# NOME DE EXIBIÇÃO:
+# O nome que aparecerá para o jogador. Suporta códigos de cor com '&'.
+display-name: "&aAnel da Vitalidade Menor"
+
+# RARIDADE:
+# Define a cor do nome e a raridade geral do acessório.
+# Valores possíveis: COMUM, INCOMUM, RARO, EPICO, LENDARIO, MITICO.
+rarity: "INCOMUM"
+
+# COR (APENAS PARA ARMADURAS DE COURO):
+# Não aplicável a acessórios (a menos que seja um acessório de couro tingível, o que é raro).
+# Comente ou remova.
+# color: "R,G,B"
+
+# ACABAMENTO DE ARMADURA (ARMOR TRIM):
+# Não aplicável a acessórios. Comente ou remova.
+# armor-trim:
+#   material: "MATERIAL"
+#   pattern: "PADRAO"
+
+# VISUAL:
+# Configurações visuais adicionais.
+visual:
+  # CUSTOM MODEL DATA:
+  # Usado com Resource Packs para dar modelos customizados ao acessório.
+  # Deve ser um número inteiro.
+  custom-model-data: 4001
+
+# REQUISITOS:
+# Condições para o jogador poder equipar o acessório.
+requirements:
+  level: 3          # Nível mínimo do jogador.
+  # class: "MAGO"   # Exemplo: Acessório específico para uma classe.
+
+# ATRIBUTOS (STATS):
+# Bônus que o acessório concede quando equipado.
+stats:
+  health-bonus: 25             # Bônus de Vida Máxima.
+  mana-bonus: 10               # Bônus de Mana Máxima.
+  # strength-bonus: 0          # Bônus de Força.
+  # intelligence-bonus: 2      # Exemplo: Bônus de Inteligência.
+
+  # physical-damage: 0         # Dano Físico (raro em acessórios).
+  # magical-damage: 0          # Dano Mágico (raro em acessórios).
+
+  # physical-defense-bonus: 0  # Bônus de Defesa Física.
+  # magical-defense-bonus: 0   # Bônus de Defesa Mágica.
+
+# LORE (DESCRIÇÃO):
+# Linhas de texto que aparecem abaixo dos atributos. Suporta códigos de cor com '&'.
+lore:
+  - "&7Um anel simples imbuído com uma"
+  - "&7centelha de energia vital."
+  - ""
+  - "&bDetalhes do Acessório:"
+  - "&f- Aumenta ligeiramente a vitalidade do portador."
+  - ""
+  - "&bCampos Relevantes para Acessórios:"
+  - "&f- &aMaterial&f: Qualquer item pode ser um acessório."
+  - "&f- &aIs-Accessory&f: Deve ser 'true'."
+  - "&f- &aStats&f: Geralmente bônus para vida, mana, atributos primários ou resistências."
+
+# IDENTIFICADO:
+# Se 'false', o acessório pode precisar ser identificado para revelar seus stats completos.
+identified: true
+
+# É UM ACESSÓRIO?:
+# Para acessórios, este valor DEVE ser 'true'.
+is-accessory: true

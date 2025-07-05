@@ -1,0 +1,28 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE HABILIDADES (SKILL)
+# =====================================================
+
+# --- Mensagens de Feedback ---
+xp-gain: "&a+ {0} XP em {1}."
+level-up: "&bSua habilidade de {0} subiu para o nível {1}!"
+
+# --- Nomes e Descrições das Habilidades ---
+type:
+  mining:
+    name: "Mineração"
+    description: "Habilidade de extrair minérios e pedras."
+  fishing:
+    name: "Pesca"
+    description: "Habilidade de pescar peixes e tesouros."
+  alchemy:
+    name: "Alquimia"
+    description: "Habilidade de criar poções e elixires."
+  cooking:
+    name: "Culinária"
+    description: "Habilidade de preparar alimentos que concedem bônus."
+  herbalism:
+    name: "Herbalismo"
+    description: "Habilidade de coletar plantas e ervas raras."
+  forging:
+    name: "Forja"
+    description: "Habilidade de criar e aprimorar equipamentos."

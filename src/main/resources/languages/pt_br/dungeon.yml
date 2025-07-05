@@ -1,0 +1,38 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE DUNGEONS (DUNGEON)
+# =====================================================
+
+# --- Mensagens de Comando ---
+usage: "&cUso: /dungeon <enter|leave|group|list>..."
+enter-usage: "&cUso: /dungeon enter <id_da_dungeon>"
+
+# --- Mensagens de Entrada/Saída da Dungeon ---
+entered: "&aVocê entrou na dungeon: {0}!"
+left: "&aVocê saiu da dungeon: {0}."
+already-in-dungeon: "&cVocê já está em uma dungeon."
+dungeon-not-found: "&cDungeon '{0}' não encontrada."
+template-not-found: "&cDungeon com ID '{0}' não encontrada." # Usado pelo comando 'enter'
+
+# --- Mensagens de Falha/Sucesso da Dungeon ---
+failed: "&cFalha na dungeon '{0}'. Motivo: {1}"
+time-expired-fail: "&cO tempo limite da dungeon '{0}' se esgotou!"
+completed: "&6Dungeon '{0}' concluída com sucesso!"
+
+# --- Mensagens de Requisitos de Grupo ---
+group:
+  min-players: "&cSeu grupo precisa de no mínimo {0} jogador(es) para entrar nesta dungeon."
+  max-players: "&cSeu grupo não pode ter mais de {0} jogador(es) para entrar nesta dungeon."
+
+# --- Mensagens de Requisitos do Jogador ---
+requirements:
+  level-too-low: "&cVocê precisa ser nível {0} para entrar nesta dungeon."
+
+# --- Mensagens de Tempo ---
+time-left: "&eTempo restante na dungeon: {0} minuto(s)." # Usado no timer da action bar ou chat
+
+# --- Mensagens de Recompensa ---
+rewards:
+  completed: "&aRecompensas por completar a dungeon '{0}':"
+  xp: "&a+ {0} XP"
+  money: "&6+ ${0}"
+  item: "&a+ {0} x{1}" # Ex: + Espada Lendária x1

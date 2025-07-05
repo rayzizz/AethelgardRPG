@@ -1,0 +1,28 @@
+# =====================================================
+#       NOMES E DESCRIÇÕES DE CLASSES (CLASS)
+# =====================================================
+# O nome do arquivo "class.yml" já atua como o prefixo "class.".
+# Portanto, as chaves aqui começam diretamente com o nome da classe, sem a chave "class:" no topo.
+
+guerreiro:
+  name: "&cGuerreiro"
+  description: "Um combatente corpo a corpo robusto."
+mago:
+  name: "&9Mago"
+  description: "Um conjurador de dano à distância."
+arqueiro:
+  name: "&aArqueiro"
+  description: "Um perito em combate à distância com arcos."
+necromante:
+  name: "&5Necromante"
+  description: "Magia negra e lacaios."
+clerigo:
+  name: "&eClérigo"
+  description: "Suporte divino e cura."
+assassino:
+  name: "&4Assassino"
+  description: "Dano rápido e evasão."
+# Adicione a classe "none" se precisar de uma tradução para ela.
+# none:
+#   name: "Nenhuma"
+#   description: "Nenhuma classe selecionada."

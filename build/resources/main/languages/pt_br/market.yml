@@ -1,0 +1,31 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE MERCADO (MARKET)
+# =====================================================
+
+# --- Mensagens de Listagem (Venda) ---
+cannot-list-air: "&cVocê não pode listar o vazio."
+invalid-price: "&cO preço deve ser maior que zero."
+item-not-found-inventory: "&cVocê não tem esse item no seu inventário."
+not-enough-money-for-fee: "&cVocê não tem dinheiro suficiente para a taxa de listagem de ${0}."
+item-listed-success: "&aListado com sucesso: {0} por ${1}."
+
+# --- Mensagens de Compra ---
+listing-not-found-or-expired: "&cEsta listagem não está mais disponível."
+cannot-buy-own-item: "&cVocê não pode comprar seu próprio item."
+not-enough-money-to-buy: "&cVocê não tem dinheiro suficiente para comprar isto. Preço: ${0}"
+item-purchased-success: "&aVocê comprou {0} de {1}."
+
+# --- Mensagens de Comando ---
+gui-open-placeholder: "&eAbrindo a GUI do mercado... (placeholder)"
+sell-usage: "&cUso: /market sell <preço>"
+sell-no-item-in-hand: "&cVocê precisa segurar um item na mão para vendê-lo."
+invalid-price-format: "&cFormato de preço inválido. Use um número (ex: 10.50)."
+
+# --- Mensagens Futuras (TODOs) ---
+# cancel-listing-success: "&aSua listagem de {0} foi cancelada."
+# cancel-listing-fail: "&cFalha ao cancelar a listagem. Verifique o ID."
+# view-usage: "&cUso: /market view [jogador]"
+# history-usage: "&cUso: /market history"
+# no-active-listings: "&eNão há listagens ativas no momento."
+# your-listings-header: "&e--- Suas Listagens Ativas ---"
+# your-listings-entry: "&7- {0} por ${1} (ID: {2})"

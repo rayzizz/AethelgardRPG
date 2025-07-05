@@ -1,0 +1,27 @@
+# =====================================================
+#       MENSAGENS DO MÓDULO DE MOBS CUSTOMIZADOS
+# =====================================================
+
+# Mensagens de chat
+chat:
+  minion-invulnerable-day: "&cSeu lacaio esqueleto está invulnerável durante o dia!"
+
+# Textos flutuantes (indicadores de dano, XP)
+floating-text:
+  xp-gain: "&f&l+{0} XP" # {0} = quantidade de XP
+  damage-indicator: "&c&l{0}" # {0} = quantidade de dano
+
+# Formatos de exibição de mobs no mundo
+display:
+  # Formato do nome do mob no mundo.
+  # {0} = Nome base do mob (traduzido via displayNameKey ou fallback)
+  # {1} = Nível do mob
+  mob-name-format: "{0} [Nv. {1}]"
+
+# --- Nomes de Mobs Específicos ---
+mobs:
+  meu_mob_forte:
+    name: "&cMeu Mob Forte"
+  # NOVO: Adicionada a tradução para o goblin de teste
+  test_goblin:
+    name: "&aGoblin de Teste"

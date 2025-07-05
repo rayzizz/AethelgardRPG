@@ -1,0 +1,32 @@
+# =====================================================
+#       BANK MODULE MESSAGES (BANK)
+# =====================================================
+
+# --- General and GUI Messages ---
+error-accessing-account: "&cAn error occurred while accessing your bank account."
+gui-title: "{0}'s Bank" # {0} = Player Name
+gui-opened: "&aOpening your bank..."
+current-balance: "&eCurrent Balance: &6${0}"
+
+# --- Deposit/Withdraw Commands ---
+deposit:
+  usage: "&cUsage: /bank deposit <amount|all>"
+  success: "&aYou deposited ${0} into your account."
+  not-enough-money: "&cYou do not have ${0} to deposit."
+  invalid-amount: "&c'{0}' is not a valid amount."
+withdraw:
+  usage: "&cUsage: /bank withdraw <amount|all>"
+  success: "&aYou withdrew ${0} from your account."
+  not-enough-balance: "&cYou do not have enough balance to withdraw ${0}."
+  invalid-amount: "&c'{0}' is not a valid amount."
+
+# --- Upgrade Commands (Future) ---
+upgrade:
+  usage: "&cUsage: /bank upgrade slots"
+  success: "&aYour bank has been expanded to {0} slots!"
+  not-enough-money: "&cYou need ${0} to expand your bank."
+  max-slots-reached: "&cYour bank has already reached maximum size."
+
+# --- Placeholders (for unimplemented commands) ---
+deposit-placeholder: "&eDeposit command (placeholder)."
+withdraw-placeholder: "&eWithdraw command (placeholder)."

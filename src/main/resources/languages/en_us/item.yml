@@ -1,0 +1,87 @@
+# =====================================================
+#        ITEM MODULE MESSAGES (ITEM)
+# =====================================================
+
+# --- Chat Messages ---
+# Keys used to provide feedback to the player about item usage.
+# Note: The main key is 'chat_messages' to match the code.
+chat_messages:
+  cannot-use:
+    level-too-low: "&cYour level is too low to use this item. (Requires: {0})"
+    strength-too-low: "&cYou do not have enough strength to use this item. (Requires: {0})"
+    wrong-class: "&cYou do not belong to the correct class to use this item. (Requires: {0})"
+    unidentified: "&cThis item needs to be identified before it can be used."
+
+# --- Lore Formats ---
+# Defines how each attribute or requirement line will appear in the item's description (lore).
+lore_formats:
+  # Requirements
+  level-req: "&7Level Required: &f{0}"
+  strength-req: "&7Strength Required: &f{0}"
+  class-req: "&7Class Required: &f{0}"
+
+  # Damage Attributes
+  physical-damage: "&c⚔ Physical Damage: &f{0}"
+  magical-damage: "&9✨ Magical Damage: &f{0}"
+
+  # Bonus Attributes
+  health-bonus: "&a❤ Health Bonus: &f+{0}"
+  mana-bonus: "&9★ Mana Bonus: &f+{0}"
+  stamina-bonus: "&e⚡ Stamina Bonus: &f+{0}"
+  strength-bonus: "&c💪 Strength Bonus: &f+{0}"
+  intelligence-bonus: "&9🧠 Intelligence Bonus: &f+{0}"
+  faith-bonus: "&e🙏 Faith Bonus: &f+{0}"
+  dexterity-bonus: "&a🎯 Dexterity Bonus: &f+{0}"
+  agility-bonus: "&b🍃 Agility Bonus: &f+{0}"
+
+  # Defense Attributes
+  physical-defense-bonus: "&7🛡 Physical Defense: &f+{0}"
+  magical-defense-bonus: "&d🔮 Magical Defense: &f+{0}"
+
+  # Special Status
+  unidentified: "&8&oUnidentified Item"
+
+# --- Rarity Names ---
+# Used to display the item's rarity on the last line of the lore.
+rarity:
+  common: "Common"
+  uncommon: "Uncommon"
+  rare: "Rare"
+  epic: "Epic"
+  legendary: "Legendary"
+  mythic: "Mythic"
+  artifact: "Artifact"
+
+# =====================================================
+#       CUSTOM ITEM DEFINITIONS
+# =====================================================
+# Used as fallback or when 'name-key' and 'lore-key' are specified in item files.
+custom_items:
+  guerreiro_test_weapon:
+    name: "&bWarrior's Training Sword"
+    lore:
+      - "&7A basic sword for training the ways of the Warrior."
+  mago_test_weapon:
+    name: "&9Mage's Apprentice Staff"
+    lore:
+      - "&7A simple staff for a Mage's first spells."
+  clerigo_test_weapon:
+    name: "&eCleric's Blessed Mace"
+    lore:
+      - "&7A mace imbued with a faint holy energy."
+  assassino_test_weapon:
+    name: "&8Assassin's Stealthy Dagger"
+    lore:
+      - "&7An agile dagger, perfect for quick and stealthy attacks."
+  necromante_test_weapon:
+    name: "&5Necromancer's Ritualistic Scythe"
+    lore:
+      - "&7A scythe used in rituals to channel dark energies."
+  ring_of_strength:
+    name: "&cRing of Brute Strength"
+    lore:
+      - "&7This ring emanates a wild power."
+  arqueiro_test_weapon: # NOVO (estava faltando)
+    name: "&aArcher's Training Bow"
+    lore:
+      - "&7A basic bow for training the ways of the Archer."

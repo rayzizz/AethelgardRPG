@@ -1,0 +1,81 @@
+# Este é um arquivo de exemplo/tutorial para demonstrar como criar ARMAS customizadas.
+# Cada campo é explicado para facilitar a criação de novas armas.
+
+# ID ÚNICO DA ARMA:
+# Usado internamente para referenciar a arma (comandos, drops, etc.).
+# Convenção: "weapon/tipo/nome_da_arma" ou "weapon/nome_da_arma".
+id: "tutorial/example_longsword"
+
+# MATERIAL BASE DO MINECRAFT:
+# Define o tipo de item base do Minecraft para a arma.
+# Ex: DIAMOND_SWORD, IRON_AXE, BOW, CROSSBOW, TRIDENT.
+material: "IRON_SWORD"
+
+# NOME DE EXIBIÇÃO:
+# O nome que aparecerá para o jogador. Suporta códigos de cor com '&'.
+display-name: "&cEspada Longa Afiada"
+
+# RARIDADE:
+# Define a cor do nome e a raridade geral da arma.
+# Valores possíveis: COMUM, INCOMUM, RARO, EPICO, LENDARIO, MITICO.
+rarity: "INCOMUM"
+
+# COR (APENAS PARA ARMADURAS DE COURO):
+# Geralmente não aplicável a armas. Comente ou remova.
+# color: "R,G,B"
+
+# ACABAMENTO DE ARMADURA (ARMOR TRIM):
+# Não aplicável a armas. Comente ou remova.
+# armor-trim:
+#   material: "MATERIAL"
+#   pattern: "PADRAO"
+
+# VISUAL:
+# Configurações visuais adicionais.
+visual:
+  # CUSTOM MODEL DATA:
+  # Usado com Resource Packs para dar modelos customizados à arma.
+  # Deve ser um número inteiro.
+  custom-model-data: 3001
+
+# REQUISITOS:
+# Condições para o jogador poder usar/equipar a arma.
+requirements:
+  level: 8          # Nível mínimo do jogador.
+  strength: 12    # Exemplo: Requisito de Força para armas pesadas.
+  # class: "GUERREIRO" # Classe específica.
+
+# ATRIBUTOS (STATS):
+# Bônus que a arma concede.
+stats:
+  # health-bonus: 0             # Bônus de Vida Máxima (menos comum em armas).
+  # mana-bonus: 0               # Bônus de Mana Máxima.
+  strength-bonus: 5            # Bônus de Força (comum em armas físicas).
+
+  physical-damage: 22           # Dano Físico base da arma (principal para armas).
+  # magical-damage: 0          # Dano Mágico base (para cajados, varinhas, etc.).
+
+  # physical-defense-bonus: 0    # Bônus de Defesa Física (raro em armas).
+  # magical-defense-bonus: 0     # Bônus de Defesa Mágica.
+
+# LORE (DESCRIÇÃO):
+# Linhas de texto que aparecem abaixo dos atributos. Suporta códigos de cor com '&'.
+lore:
+  - "&7Uma espada confiável, bem balanceada."
+  - ""
+  - "&bDetalhes da Arma:"
+  - "&f- Lâmina afiada para cortes precisos."
+  - "&f- Requer um portador com alguma força."
+  - ""
+  - "&bCampos Relevantes para Armas:"
+  - "&f- &aMaterial&f: Tipo de arma (ex: IRON_SWORD)."
+  - "&f- &aStats&f: Principalmente 'physical-damage' ou 'magical-damage'."
+  - "&f- &aStats&f: Bônus como 'strength-bonus' ou 'intelligence-bonus' são comuns."
+
+# IDENTIFICADO:
+# Se 'false', a arma pode precisar ser identificada para revelar seus stats completos.
+identified: true
+
+# É UM ACESSÓRIO?:
+# Para armas, este valor deve ser 'false'.
+is-accessory: false

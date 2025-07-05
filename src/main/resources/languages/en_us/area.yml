@@ -1,0 +1,25 @@
+# =====================================================
+#       AREA MODULE MESSAGES (AREA)
+# =====================================================
+
+# --- Region Entry/Exit Messages ---
+# This key is used as a wrapper for entry and exit messages defined
+# directly in the configuration files of each region (e.g., safezone.yml).
+# {0} will be replaced by the message configured in the region.
+# Example usage in code: player.sendMessage(plugin.getMessage("area.custom-message", region.getEntryMessage()));
+custom-message: "{0}"
+
+# --- Admin Command Messages (/areaadmin) ---
+admin:
+  usage: "&cUsage: /areaadmin <define|delete|list> ..."
+  define-placeholder: "&eArea definition command (placeholder)."
+  delete-placeholder: "&eArea deletion command (placeholder)."
+  list-placeholder: "&eArea list command (placeholder)."
+
+# --- Future Messages (TODOs) ---
+# If you add more functionalities to the Area module that need messages,
+# add the keys here.
+# Ex:
+#  pvp-toggle-on: "&aPvP enabled in this area."
+#  pvp-toggle-off: "&cPvP disabled in this area."
+#  mob-spawn-prevented: "&cVanilla mob spawns have been prevented in this area."
